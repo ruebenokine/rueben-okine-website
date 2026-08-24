@@ -377,9 +377,9 @@ export function ConsultingSite() {
               <article className="rounded-2xl bg-secondary p-7 md:p-9">
                 <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">Working style</p>
                 <h2 className="mt-4 font-serif text-3xl font-semibold">Ready for diverse rooms</h2>
-                <p className="mt-5 leading-relaxed text-muted-foreground">From policy offices to classrooms and community forums, I bring structure, care, and clarity to complex work.</p>
+                <p className="mt-5 leading-relaxed text-muted-foreground">From policy offices to classrooms and community forums, I bring structure, care, and clarity to complex work. I move comfortably between formal institutional settings and grassroots community spaces, adapting my approach to fit the room while staying grounded in evidence and close to the people affected. Whether I am leading a workshop, drafting a policy brief, or supporting a family through a difficult transition, I aim to listen first, communicate clearly in plain language, and follow through on what I commit to.</p>
                 <div className="mt-7 flex flex-wrap gap-2">
-                  {['International engagement', 'Facilitation', 'Report writing', 'Programme coordination', 'Stakeholder communication', 'Budget oversight'].map((skill) => <span key={skill} className="rounded-full border border-border bg-background px-3 py-2 text-sm font-semibold">{skill}</span>)}
+                  {['International engagement', 'Facilitation', 'Report writing', 'Programme coordination', 'Stakeholder communication'].map((skill) => <span key={skill} className="rounded-full border border-border bg-background px-3 py-2 text-sm font-semibold">{skill}</span>)}
                 </div>
               </article>
             </div>
