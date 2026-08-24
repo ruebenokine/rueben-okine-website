@@ -435,7 +435,7 @@ export function ConsultingSite() {
               <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">Bring me the question you need answered.</h2>
               <p className="text-lg leading-relaxed text-muted-foreground">Tell me what you are working on. I will reply to discuss fit, timing, and a tailored quote for the expert support you need.</p>
               <div className="flex flex-col gap-3">
-                <a className="flex min-h-11 items-center gap-3 font-bold text-primary underline-offset-4 hover:underline" href={`mailto:${email}`}><Mail aria-hidden="true" className="size-5" />{email}</a>
+                <a className="flex min-h-11 items-center gap-3 font-bold text-primary underline-offset-4 hover:underline" href={`mailto:${email}`}><Mail aria-hidden="true" className="size-5" />Email me</a>
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground">Advisory work is tailored to each engagement and does not imply legal representation or guaranteed outcomes.</p>
             </div>
