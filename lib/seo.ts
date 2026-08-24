@@ -4,22 +4,22 @@ export const faqs = [
   {
     question: 'What advisory and expert services does Dr. Rueben Okine provide?',
     answer:
-      'Dr. Okine provides migration and diaspora advisory, policy analysis, research and evaluation, higher and basic education support, family and student guidance, intercultural development, and workplace integration services.',
+      'I provide migration and diaspora advisory, policy analysis, research and evaluation, higher and basic education support, family and student guidance, intercultural development, and workplace integration services.',
   },
   {
     question: 'Who can work with Dr. Rueben Okine?',
     answer:
-      'He works with governments, municipalities, universities, research institutes, schools, companies, international organisations, NGOs, foundations, diaspora associations, students, and families.',
+      'I work with governments, municipalities, universities, research institutes, schools, companies, international organisations, NGOs, foundations, diaspora associations, students, and families.',
   },
   {
     question: 'Is Dr. Rueben Okine available for international engagements?',
     answer:
-      'Yes. Dr. Okine is based in Berlin, Germany, and is available for international advisory, research, education, speaking, facilitation, and programme engagements.',
+      "Yes — I'm based in Berlin, Germany, and available for international advisory, research, education, speaking, facilitation, and programme engagements.",
   },
   {
     question: 'How can an organisation request a quote?',
     answer:
-      'Email or call with the challenge, intended audience, desired outcome, and timing. Dr. Okine will clarify the scope, deliverables, schedule, and professional fee before work begins.',
+      'Email me with the challenge, intended audience, desired outcome, and timing, and I will clarify the scope, deliverables, schedule, and professional fee before work begins.',
   },
 ] as const
 
@@ -40,7 +40,6 @@ export function getJsonLd() {
         url,
         image: siteConfig.image,
         email: `mailto:${siteConfig.email}`,
-        telephone: siteConfig.phone,
         jobTitle: [
           'Migration Scholar',
           'Diaspora Engagement Specialist',
@@ -69,7 +68,6 @@ export function getJsonLd() {
         description: siteConfig.description,
         image: siteConfig.image,
         email: siteConfig.email,
-        telephone: siteConfig.phone,
         founder: { '@id': personId },
         areaServed: 'Worldwide',
         address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },

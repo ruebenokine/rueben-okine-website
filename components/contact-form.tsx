@@ -41,7 +41,7 @@ export function ContactForm() {
           <option>Higher education and academic services</option>
           <option>Basic education — Kitas and schools</option>
           <option>Family and student support</option>
-          <option>Intercultural development and diversity</option>
+          <option>Intercultural development and cohesion</option>
           <option>Speaking, workshop, or advisory session</option>
           <option>Other collaboration</option>
         </select>

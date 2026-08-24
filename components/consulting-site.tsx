@@ -12,7 +12,6 @@ import {
   Menu,
   MapPin,
   Network,
-  Phone,
   Search,
   Users,
 } from 'lucide-react'
@@ -20,7 +19,6 @@ import { ContactForm } from '@/components/contact-form'
 import { faqs } from '@/lib/seo'
 
 const email = 'rueben.e.k.okine@gmail.com'
-const phone = '+49 15901443213'
 
 const services = [
   {
@@ -42,7 +40,7 @@ const services = [
   {
     id: 'higher-education-academia',
     icon: GraduationCap,
-    title: 'Higher Education and Academia',
+    title: 'Higher Education and Academic Support',
     description:
       'Specialist academic support for universities, colleges, research centres, graduate students, and international programmes.',
     deliverables: ['Lecturing and guest speaking', 'Thesis supervision and PhD coaching', 'Research projects and proposal development'],
@@ -50,7 +48,7 @@ const services = [
   {
     id: 'basic-education',
     icon: BookOpen,
-    title: 'Basic Education',
+    title: 'Basic Education and Youth Development',
     description:
       'Inclusive support for Kitas and schools that strengthens learning, participation, social development, youth development, and intercultural understanding.',
     deliverables: ['Programme and curriculum design', 'Social development initiatives', 'Teacher, student, and community engagement'],
@@ -66,16 +64,36 @@ const services = [
   {
     id: 'intercultural-development',
     icon: Users,
-    title: 'Intercultural Development',
+    title: 'Intercultural Development and Cohesion',
     description:
       'Practical learning and facilitation that helps diverse institutions and communities work together with confidence and respect.',
-    deliverables: ['Intercultural competence training', 'Diversity and inclusion workshops', 'Community dialogue and facilitation'],
+    deliverables: ['Intercultural competence training', 'Cohesion and inclusion workshops', 'Community dialogue and facilitation'],
+  },
+]
+
+const researchAreas = [
+  {
+    theme: 'Migration & Mobility',
+    items: ['Migration and development', 'Labour migration', 'International student mobility'],
+  },
+  {
+    theme: 'Policy & Governance',
+    items: ['Migration policy and governance', 'Citizenship and political participation'],
+  },
+  {
+    theme: 'Diaspora & Belonging',
+    items: ['Diaspora engagement', 'Transnationalism', 'Integration and social inclusion'],
+  },
+  {
+    theme: 'Research & Practice',
+    items: ['Qualitative and mixed methods research', 'Intercultural competence and inclusion', 'Education and youth development'],
   },
 ]
 
 const navLinks = [
   { href: '#top', label: 'Home' },
   { href: '#about', label: 'About' },
+  { href: '#research', label: 'Research Interests' },
   { href: '#experience', label: 'Experience' },
   { href: '#faq', label: 'FAQ' },
   { href: '#contact', label: 'Contact' },
@@ -136,6 +154,7 @@ export function ConsultingSite() {
             </div>
 
             <a className="hover:text-primary" href="#about">About</a>
+            <a className="hover:text-primary" href="#research">Research Interests</a>
             <a className="hover:text-primary" href="#experience">Experience</a>
             <a className="hover:text-primary" href="#faq">FAQ</a>
             <a className="hover:text-primary" href="#contact">Contact</a>
@@ -174,19 +193,12 @@ export function ConsultingSite() {
                 <h1 className="max-w-3xl font-serif text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-balance md:text-6xl lg:text-7xl">
                   Clear thinking for societies on the move.
                 </h1>
-                <p className="max-w-2xl text-lg font-bold leading-relaxed text-foreground md:text-xl">
-                  Migration Scholar · Diaspora Engagement Specialist · Research Expert · Educator · Intercultural Development Practitioner
-                </p>
                 <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
                   I help organisations, institutions, communities, students, and families turn complex questions about migration, research, education, and social development into practical, people-centred action worldwide.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">
                 <ArrowLink href={`mailto:${email}?subject=Advisory%20inquiry%20for%20Dr.%20Okine`}>Tell me about your project</ArrowLink>
-                <a href={`tel:${phone.replaceAll(' ', '')}`} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-bold hover:border-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
-                  <Phone aria-hidden="true" className="size-4" />
-                  Call me
-                </a>
               </div>
               <p className="flex items-center gap-2 text-sm text-muted-foreground"><MapPin aria-hidden="true" className="size-4 text-primary" /> Berlin-based · Available for international engagements</p>
             </div>
@@ -284,18 +296,28 @@ export function ConsultingSite() {
           </div>
         </section>
 
-        <section className="bg-background py-20 md:py-24" aria-labelledby="expertise-heading">
+        <section id="research" className="scroll-mt-24 bg-background py-20 md:py-24" aria-labelledby="expertise-heading">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="max-w-3xl">
               <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">Academic &amp; research focus</p>
               <h2 id="expertise-heading" className="mt-4 font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">Areas of academic and research interest.</h2>
               <p className="mt-4 text-lg leading-relaxed text-muted-foreground">The themes that shape my scholarship, publications, teaching, and applied research.</p>
             </div>
-            <ul className="mt-10 flex flex-wrap gap-3" aria-label="Academic and research focus areas">
-              {['Migration and development', 'Diaspora engagement', 'Transnationalism', 'Labour migration', 'Migration policy and governance', 'Citizenship and political participation', 'Qualitative and mixed methods research', 'International student mobility', 'Integration and social inclusion', 'Intercultural competence and diversity', 'Education and youth development'].map((expertise) => (
-                <li key={expertise} className="rounded-full border border-border bg-secondary px-4 py-3 text-sm font-bold">{expertise}</li>
+            <div className="mt-10 grid gap-6 sm:grid-cols-2" aria-label="Academic and research focus areas, by theme">
+              {researchAreas.map((group) => (
+                <div key={group.theme} className="rounded-2xl border border-border bg-secondary p-6">
+                  <h3 className="font-serif text-lg font-semibold text-primary">{group.theme}</h3>
+                  <ul className="mt-4 flex flex-col gap-2.5">
+                    {group.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2.5 text-sm font-medium leading-snug">
+                        <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-primary" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </section>
 
@@ -389,7 +411,7 @@ export function ConsultingSite() {
           <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[.75fr_1.25fr] lg:px-8">
             <div className="flex flex-col gap-4">
               <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">Frequently asked questions</p>
-              <h2 id="faq-heading" className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">Working with Dr. Okine.</h2>
+              <h2 id="faq-heading" className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">Working with me.</h2>
               <p className="leading-relaxed text-muted-foreground">Direct answers about services, clients, international availability, and starting an engagement.</p>
             </div>
             <div className="flex flex-col border-t border-border">
@@ -414,7 +436,6 @@ export function ConsultingSite() {
               <p className="text-lg leading-relaxed text-muted-foreground">Tell me what you are working on. I will reply to discuss fit, timing, and a tailored quote for the expert support you need.</p>
               <div className="flex flex-col gap-3">
                 <a className="flex min-h-11 items-center gap-3 font-bold text-primary underline-offset-4 hover:underline" href={`mailto:${email}`}><Mail aria-hidden="true" className="size-5" />{email}</a>
-                <a className="flex min-h-11 items-center gap-3 font-bold text-primary underline-offset-4 hover:underline" href={`tel:${phone.replaceAll(' ', '')}`}><Phone aria-hidden="true" className="size-5" />{phone}</a>
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground">Advisory work is tailored to each engagement and does not imply legal representation or guaranteed outcomes.</p>
             </div>
@@ -426,7 +447,7 @@ export function ConsultingSite() {
       <footer className="bg-primary py-10 text-primary-foreground">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 md:flex-row md:items-end md:justify-between lg:px-8">
           <div><p className="font-serif text-2xl font-semibold">Dr. Rueben Okine</p><p className="mt-2 text-sm text-primary-foreground/75">Migration policy · Research · Education</p></div>
-          <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><a className="underline-offset-4 hover:underline" href={`mailto:${email}`}>Email</a><a className="underline-offset-4 hover:underline" href={`tel:${phone.replaceAll(' ', '')}`}>Phone</a><span>Berlin, Germany</span></div>
+          <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><a className="underline-offset-4 hover:underline" href={`mailto:${email}`}>Email</a><span>Berlin, Germany</span></div>
         </div>
       </footer>
     </>

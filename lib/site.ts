@@ -4,7 +4,6 @@ export const siteConfig = {
   description:
     'International advisory and expert services in migration policy, diaspora engagement, research, education, workplace integration, and intercultural development.',
   email: 'rueben.e.k.okine@gmail.com',
-  phone: '+4915901443213',
   location: 'Berlin, Germany',
   image:
     'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8584-2zdoi66MlJhzsRWntMtbHpFGU3XGd5.jpeg',
