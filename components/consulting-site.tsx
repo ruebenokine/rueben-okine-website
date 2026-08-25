@@ -228,7 +228,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
         </section>
 
         <section id="about" className="scroll-mt-24 bg-primary py-20 text-primary-foreground md:py-28">
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-2 lg:gap-20 lg:px-8">
+          <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 lg:gap-20 lg:px-8">
             <div className="overflow-hidden rounded-[2rem] border-8 border-primary-foreground/15">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8586-Li4Uz9nvqLctT1n4YZ449ofcFKZAza.jpeg"
