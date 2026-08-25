@@ -76,8 +76,9 @@ export const content = {
     about: {
       eyebrow: 'A bridge between evidence and people',
       heading: 'Policy works better when people can see themselves in it.',
-      p1: 'I am a migration scholar and development practitioner with over 15 years of experience spanning migration policy, academic research, higher education, diaspora engagement, and intercultural learning. I hold a Ph.D. from the Technical University of Berlin and an MA in Migration Studies from the University of Ghana.',
-      p2: 'My work with universities, research institutes, government agencies, international organisations, diaspora associations, schools, and civil society helps me listen across institutions and communities, make complex systems understandable, and build practical common ground.',
+      p1: "I am a migration scholar, educator, and development practitioner with more than 15 years of experience working across migration policy, research, higher education, diaspora engagement, and intercultural learning. My academic journey took me from the University of Ghana, where I completed a Master of Arts in Migration Studies, to the Technical University of Berlin, where I earned a Ph.D. in Migration and Diaspora Studies.",
+      p2: "Throughout my career, I have been driven by a deep interest in how migration shapes people's lives, communities, and societies. My work brings together research, policy, and practice, with a particular focus on migration, diaspora engagement, citizenship, belonging, and social inclusion. Along the way, I have had the privilege of collaborating with universities, research institutes, government agencies, international organisations, diaspora associations, schools, and civil society organisations across Africa and Europe.",
+      p3: 'What I value most is creating connections — between ideas and action, institutions and communities, and policy debates and lived experiences. Whether I am conducting research, developing programmes, supporting students, or facilitating intercultural dialogue, I seek to make complex issues more accessible and bring diverse perspectives into meaningful conversation. At the heart of my work is a commitment to helping people, organisations, and communities navigate change, build understanding, and create positive social impact.',
       pill1: 'Stakeholder trust and coalition-building',
       pill2: 'Evidence translated into action',
       cta: 'Explore a collaboration',
@@ -94,11 +95,15 @@ export const content = {
       ],
     },
     experience: {
-      eyebrow: 'Background & experience',
+      eyebrow: 'Background & Experience',
       heading: 'A career connecting public policy, scholarship, education, and community life.',
-      p1: 'My professional background brings together migration governance, applied social research, university teaching, programme leadership, and people-centred education. I have worked across Ghana, Germany, and wider European contexts, translating institutional priorities into practical approaches that recognise the realities of migrants, diaspora communities, students, families, and workplaces.',
-      p2: 'My public-sector experience in Ghana developed my grounding in migration administration, policy implementation, regulatory analysis, financial oversight, and cooperation with international partners including IOM and GIZ. In Germany, my research and teaching with the Technical University of Berlin and the Leibniz Institute for Research on Society and Space deepened my expertise in migration, diaspora engagement, integration, citizenship, and transnational life.',
-      p3: 'Within schools and community organisations, I have led inclusive programmes, coordinated staff, supported student welfare, worked closely with parents, and created spaces where diverse people can participate and thrive. This combination enables me to advise institutions with academic depth, policy awareness, intercultural sensitivity, and a clear understanding of how change is experienced by people.',
+      p1: 'Growing up in Accra, I was acutely aware of the multifaceted impact of migration on social and cultural structures at the family, local, and state levels. This early exposure, coupled with my first professional role focusing on migration and development policy, sparked a lifelong commitment to this field. My goal has always been to contribute to a better society by applying my professional and research expertise to develop effective socio-economic policies, strategies, and partnerships.',
+      p2: 'My academic and professional journey has been shaped by a longstanding commitment to understanding migration, diaspora engagement, and social inclusion. I began at the University of Ghana, where I earned a Bachelor of Arts in Psychology, developing a strong foundation in human behavior that continues to inform my work in applied social science and student welfare. I later completed a Master of Arts in Migration Studies at the same institution, establishing a lasting focus on transnational communities and diaspora dynamics.',
+      p3: 'To bridge theory with practice, I obtained a Diploma in Migration Management from Maastricht University in 2014, gaining valuable expertise in migration governance, policy development, and international cooperation. In 2016, I expanded my global perspective through the European Master in Migration and Intercultural Relations — a joint programme spanning universities in Germany, Norway, and Slovenia. This experience strengthened my interdisciplinary approach to integration, inclusion, and community engagement.',
+      p4: 'I completed my academic training with a Ph.D. in Migration and Diaspora Studies from the Technical University of Berlin in 2021. My doctoral research, together with my work at the Leibniz Institute for Research on Society and Space (Erkner), reinforced my commitment to connecting academic research and public policy with the lived experiences of migrants, families, and communities.',
+      p5: 'Alongside my academic background, I bring over a decade of professional experience across migration research, policy, governance, and education. My public-sector work in Ghana provided a strong grounding in policy development, programme implementation, regulatory analysis, financial oversight, and collaboration with international partners, including the International Organization for Migration (IOM) and the Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ).',
+      p6: 'In Europe, my research with the Technical University of Berlin and the Leibniz Institute deepened my expertise in integration and transnational life. Additionally, during my time with the African Diaspora Policy Centre in The Hague, I explored the contributions of African diaspora organisations in the Netherlands to peacebuilding initiatives in Kenya, Rwanda, Djibouti, and the Democratic Republic of Congo. Across these roles, I have conducted extensive fieldwork and interviews with diaspora organisations and key stakeholders across the field.',
+      p7: 'Beyond research and policy, I have led inclusive educational and community programmes, coordinated multidisciplinary teams, supported student welfare, and collaborated closely with parents and institutional stakeholders to create environments where diverse individuals can thrive. This combination of academic depth, policy expertise, programme leadership, and intercultural understanding enables me to support institutions in designing practical, people-centred solutions that create a meaningful impact.',
     },
     workplace: {
       eyebrow: 'Workplace integration & social cohesion',
@@ -112,17 +117,6 @@ export const content = {
         'Inclusive workplace and company culture',
       ],
       cta: 'Discuss your organisation',
-    },
-    qualifications: {
-      eyebrow: 'Qualifications',
-      heading: 'Deep specialist training',
-      items: [
-        { degree: 'Ph.D., Migration & Diaspora Studies', place: 'Technical University of Berlin, 2021' },
-        { degree: 'European Master in Migration & Intercultural Relations', place: 'Universities in Germany, Norway, and Slovenia, 2016' },
-        { degree: 'Diploma, Migration Management', place: 'Maastricht University, 2014' },
-        { degree: 'MA, Migration Studies', place: 'University of Ghana' },
-        { degree: 'BA, Psychology', place: 'University of Ghana' },
-      ],
     },
     workingStyle: {
       eyebrow: 'Working style',
@@ -146,17 +140,17 @@ export const content = {
       subheading: 'Direct answers about services, clients, international availability, and starting an engagement.',
       items: [
         {
-          question: 'What advisory and expert services does Dr. Rueben Okine provide?',
+          question: 'What advisory and expert services do you provide?',
           answer:
             'I provide migration and diaspora advisory, policy analysis, research and evaluation, higher and basic education support, family and student guidance, intercultural development, and workplace integration services.',
         },
         {
-          question: 'Who can work with Dr. Rueben Okine?',
+          question: 'Who do you work with?',
           answer:
             'I work with governments, municipalities, universities, research institutes, schools, companies, international organisations, NGOs, foundations, diaspora associations, students, and families.',
         },
         {
-          question: 'Is Dr. Rueben Okine available for international engagements?',
+          question: 'Are you available for international engagements?',
           answer:
             "Yes — I'm based in Berlin, Germany, and available for international advisory, research, education, speaking, facilitation, and programme engagements.",
         },
@@ -291,8 +285,9 @@ export const content = {
     about: {
       eyebrow: 'Eine Brücke zwischen Evidenz und Menschen',
       heading: 'Politik wirkt besser, wenn Menschen sich darin wiederfinden.',
-      p1: 'Ich bin Migrationswissenschaftler und Entwicklungsfachmann mit über 15 Jahren Erfahrung in Migrationspolitik, akademischer Forschung, Hochschulbildung, Diaspora-Engagement und interkulturellem Lernen. Ich habe an der Technischen Universität Berlin promoviert und einen Master in Migration Studies von der University of Ghana.',
-      p2: 'Meine Arbeit mit Universitäten, Forschungsinstituten, Regierungsbehörden, internationalen Organisationen, Diaspora-Verbänden, Schulen und der Zivilgesellschaft hilft mir, institutions- und gemeinschaftsübergreifend zuzuhören, komplexe Systeme verständlich zu machen und praktische gemeinsame Grundlagen zu schaffen.',
+      p1: 'Ich bin Migrationswissenschaftler, Dozent und Entwicklungsfachmann mit mehr als 15 Jahren Erfahrung in Migrationspolitik, Forschung, Hochschulbildung, Diaspora-Engagement und interkulturellem Lernen. Mein akademischer Weg führte mich von der University of Ghana, wo ich einen Master of Arts in Migration Studies abschloss, an die Technische Universität Berlin, wo ich in Migrations- und Diaspora-Studien promovierte.',
+      p2: 'Während meiner gesamten Laufbahn hat mich ein tiefes Interesse daran angetrieben, wie Migration das Leben von Menschen, Gemeinschaften und Gesellschaften prägt. Meine Arbeit verbindet Forschung, Politik und Praxis mit besonderem Fokus auf Migration, Diaspora-Engagement, Staatsbürgerschaft, Zugehörigkeit und soziale Inklusion. Dabei hatte ich das Privileg, mit Universitäten, Forschungsinstituten, Regierungsbehörden, internationalen Organisationen, Diaspora-Verbänden, Schulen und zivilgesellschaftlichen Organisationen in Afrika und Europa zusammenzuarbeiten.',
+      p3: 'Am meisten schätze ich es, Verbindungen zu schaffen — zwischen Ideen und Handeln, zwischen Institutionen und Gemeinschaften sowie zwischen politischen Debatten und gelebter Erfahrung. Ob ich forsche, Programme entwickle, Studierende begleite oder interkulturellen Dialog moderiere: Ich möchte komplexe Themen zugänglicher machen und unterschiedliche Perspektiven in einen sinnvollen Austausch bringen. Im Kern meiner Arbeit steht das Anliegen, Menschen, Organisationen und Gemeinschaften dabei zu unterstützen, Wandel zu gestalten, Verständnis aufzubauen und positive gesellschaftliche Wirkung zu erzielen.',
       pill1: 'Vertrauensaufbau und Koalitionsbildung mit Stakeholdern',
       pill2: 'Evidenz, übersetzt in konkretes Handeln',
       cta: 'Zusammenarbeit besprechen',
@@ -311,9 +306,13 @@ export const content = {
     experience: {
       eyebrow: 'Werdegang & Erfahrung',
       heading: 'Eine Laufbahn zwischen öffentlicher Politik, Wissenschaft, Bildung und Gemeinschaftsleben.',
-      p1: 'Mein beruflicher Hintergrund verbindet Migrations-Governance, angewandte Sozialforschung, universitäre Lehre, Programmleitung und menschenzentrierte Bildung. Ich habe in Ghana, Deutschland und im weiteren europäischen Raum gearbeitet und institutionelle Prioritäten in praktische Ansätze übersetzt, die die Realität von Migrantinnen und Migranten, Diaspora-Gemeinschaften, Studierenden, Familien und Arbeitsplätzen berücksichtigen.',
-      p2: 'Meine Erfahrung im öffentlichen Dienst in Ghana bildete die Grundlage für meine Kenntnisse in Migrationsverwaltung, Politikumsetzung, Regulierungsanalyse, Finanzaufsicht und Zusammenarbeit mit internationalen Partnern wie IOM und GIZ. In Deutschland vertiefte meine Forschung und Lehre an der Technischen Universität Berlin und am Leibniz-Institut für Raumbezogene Sozialforschung meine Expertise in Migration, Diaspora-Engagement, Integration, Staatsbürgerschaft und transnationalem Leben.',
-      p3: 'In Schulen und Gemeinschaftsorganisationen habe ich inklusive Programme geleitet, Personal koordiniert, das Wohlergehen von Schülerinnen und Schülern unterstützt, eng mit Eltern zusammengearbeitet und Räume geschaffen, in denen unterschiedliche Menschen teilhaben und sich entfalten können. Diese Kombination befähigt mich, Institutionen mit akademischer Tiefe, politischem Verständnis, interkultureller Sensibilität und einem klaren Blick dafür zu beraten, wie Wandel von Menschen erlebt wird.',
+      p1: 'Aufgewachsen in Accra, wurde mir früh bewusst, wie vielschichtig sich Migration auf soziale und kulturelle Strukturen auswirkt — auf Ebene der Familie, der Kommune und des Staates. Diese frühe Prägung, verbunden mit meiner ersten beruflichen Position im Bereich Migrations- und Entwicklungspolitik, weckte ein lebenslanges Engagement für dieses Feld. Mein Ziel war stets, mit meiner fachlichen und wissenschaftlichen Expertise zu einer besseren Gesellschaft beizutragen, indem ich wirksame sozioökonomische Politiken, Strategien und Partnerschaften entwickle.',
+      p2: 'Mein akademischer und beruflicher Weg wurde durch ein langjähriges Engagement für das Verständnis von Migration, Diaspora-Engagement und sozialer Inklusion geprägt. Ich begann an der University of Ghana, wo ich einen Bachelor of Arts in Psychologie erwarb und eine fundierte Grundlage im Verständnis menschlichen Verhaltens entwickelte, die bis heute meine Arbeit in angewandter Sozialwissenschaft und studentischem Wohlergehen prägt. Später schloss ich an derselben Institution einen Master of Arts in Migration Studies ab und legte damit einen dauerhaften Schwerpunkt auf transnationale Gemeinschaften und Diaspora-Dynamiken.',
+      p3: 'Um Theorie und Praxis miteinander zu verbinden, erwarb ich 2014 ein Diplom in Migrationsmanagement an der Maastricht University und gewann dabei wertvolle Expertise in Migrationsgovernance, Politikentwicklung und internationaler Zusammenarbeit. 2016 erweiterte ich meine globale Perspektive durch den European Master in Migration and Intercultural Relations — ein gemeinsames Programm von Universitäten in Deutschland, Norwegen und Slowenien. Diese Erfahrung stärkte meinen interdisziplinären Ansatz zu Integration, Inklusion und gesellschaftlichem Engagement.',
+      p4: 'Meine akademische Ausbildung schloss ich 2021 mit einer Promotion in Migrations- und Diaspora-Studien an der Technischen Universität Berlin ab. Meine Doktorarbeit sowie meine Tätigkeit am Leibniz-Institut für Raumbezogene Sozialforschung (Erkner) festigten mein Engagement, akademische Forschung und öffentliche Politik mit den gelebten Erfahrungen von Migrantinnen und Migranten, Familien und Gemeinschaften zu verbinden.',
+      p5: 'Neben meinem akademischen Hintergrund bringe ich mehr als ein Jahrzehnt Berufserfahrung in Migrationsforschung, Politik, Governance und Bildung mit. Meine Tätigkeit im öffentlichen Dienst in Ghana bildete eine fundierte Grundlage in Politikentwicklung, Programmumsetzung, Regulierungsanalyse, Finanzaufsicht und Zusammenarbeit mit internationalen Partnern, darunter die Internationale Organisation für Migration (IOM) und die Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ).',
+      p6: 'In Europa vertiefte meine Forschung an der Technischen Universität Berlin und am Leibniz-Institut meine Expertise in Integration und transnationalem Leben. Während meiner Zeit am African Diaspora Policy Centre in Den Haag untersuchte ich zudem die Beiträge afrikanischer Diaspora-Organisationen in den Niederlanden zu Friedensinitiativen in Kenia, Ruanda, Dschibuti und der Demokratischen Republik Kongo. In diesen Positionen habe ich umfangreiche Feldforschung betrieben und zahlreiche Interviews mit Diaspora-Organisationen und wichtigen Akteuren des Feldes geführt.',
+      p7: 'Über Forschung und Politik hinaus habe ich inklusive Bildungs- und Gemeinschaftsprogramme geleitet, multidisziplinäre Teams koordiniert, das Wohlergehen von Schülerinnen und Schülern unterstützt und eng mit Eltern sowie institutionellen Stakeholdern zusammengearbeitet, um Umgebungen zu schaffen, in denen unterschiedliche Menschen sich entfalten können. Diese Kombination aus akademischer Tiefe, politischer Fachkenntnis, Programmleitung und interkulturellem Verständnis befähigt mich, Institutionen bei der Entwicklung praktischer, menschenzentrierter Lösungen mit spürbarer Wirkung zu unterstützen.',
     },
     workplace: {
       eyebrow: 'Integration am Arbeitsplatz & sozialer Zusammenhalt',
@@ -327,17 +326,6 @@ export const content = {
         'Inklusiver Arbeitsplatz und Unternehmenskultur',
       ],
       cta: 'Ihre Organisation besprechen',
-    },
-    qualifications: {
-      eyebrow: 'Qualifikationen',
-      heading: 'Fundierte Fachausbildung',
-      items: [
-        { degree: 'Ph.D., Migrations- und Diaspora-Studien', place: 'Technische Universität Berlin, 2021' },
-        { degree: 'European Master in Migration & Intercultural Relations', place: 'Universitäten in Deutschland, Norwegen und Slowenien, 2016' },
-        { degree: 'Diplom, Migrationsmanagement', place: 'Maastricht University, 2014' },
-        { degree: 'MA, Migration Studies', place: 'University of Ghana' },
-        { degree: 'BA, Psychologie', place: 'University of Ghana' },
-      ],
     },
     workingStyle: {
       eyebrow: 'Arbeitsweise',
@@ -361,17 +349,17 @@ export const content = {
       subheading: 'Klare Antworten zu Leistungen, Kundschaft, internationaler Verfügbarkeit und dem Beginn einer Zusammenarbeit.',
       items: [
         {
-          question: 'Welche Beratungs- und Fachleistungen bietet Dr. Rueben Okine an?',
+          question: 'Welche Beratungs- und Fachleistungen bieten Sie an?',
           answer:
             'Ich biete Migrations- und Diaspora-Beratung, Politikanalyse, Forschung und Evaluation, Unterstützung im Hochschul- und Grundbildungsbereich, Familien- und Studierendenbegleitung, interkulturelle Entwicklung sowie Integration am Arbeitsplatz an.',
         },
         {
-          question: 'Wer kann mit Dr. Rueben Okine zusammenarbeiten?',
+          question: 'Mit wem arbeiten Sie zusammen?',
           answer:
             'Ich arbeite mit Regierungen, Kommunen, Universitäten, Forschungsinstituten, Schulen, Unternehmen, internationalen Organisationen, NGOs, Stiftungen, Diaspora-Verbänden, Studierenden und Familien zusammen.',
         },
         {
-          question: 'Ist Dr. Rueben Okine für internationale Einsätze verfügbar?',
+          question: 'Sind Sie für internationale Einsätze verfügbar?',
           answer:
             'Ja — ich bin in Berlin ansässig und für internationale Beratung, Forschung, Bildung, Vorträge, Moderation und Programmarbeit verfügbar.',
         },

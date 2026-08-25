@@ -244,6 +244,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
               <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.about.heading}</h2>
               <p className="text-lg leading-relaxed text-primary-foreground/80">{t.about.p1}</p>
               <p className="leading-relaxed text-primary-foreground/80">{t.about.p2}</p>
+              <p className="leading-relaxed text-primary-foreground/80">{t.about.p3}</p>
               <div className="grid gap-4 sm:grid-cols-2">
                 <p className="flex gap-3 font-semibold"><Users aria-hidden="true" className="size-5 shrink-0" /> {t.about.pill1}</p>
                 <p className="flex gap-3 font-semibold"><BookOpen aria-hidden="true" className="size-5 shrink-0" /> {t.about.pill2}</p>
@@ -286,6 +287,10 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
               <p className="text-xl leading-relaxed text-foreground">{t.experience.p1}</p>
               <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p2}</p>
               <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p3}</p>
+              <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p4}</p>
+              <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p5}</p>
+              <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p6}</p>
+              <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p7}</p>
             </div>
           </div>
         </section>
@@ -318,25 +323,14 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
 
         <section className="bg-background py-20 md:py-28">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="grid gap-6 md:grid-cols-2">
-              <article className="rounded-2xl border border-border p-7 md:p-9">
-                <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.qualifications.eyebrow}</p>
-                <h2 className="mt-4 font-serif text-3xl font-semibold">{t.qualifications.heading}</h2>
-                <ul className="mt-7 flex flex-col gap-5">
-                  {t.qualifications.items.map((item) => (
-                    <li key={item.degree}><strong>{item.degree}</strong><br/><span className="text-sm text-muted-foreground">{item.place}</span></li>
-                  ))}
-                </ul>
-              </article>
-              <article className="rounded-2xl bg-secondary p-7 md:p-9">
-                <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.workingStyle.eyebrow}</p>
-                <h2 className="mt-4 font-serif text-3xl font-semibold">{t.workingStyle.heading}</h2>
-                <p className="mt-5 leading-relaxed text-muted-foreground">{t.workingStyle.paragraph}</p>
-                <div className="mt-7 flex flex-wrap gap-2">
-                  {t.workingStyle.tags.map((skill) => <span key={skill} className="rounded-full border border-border bg-background px-3 py-2 text-sm font-semibold">{skill}</span>)}
-                </div>
-              </article>
-            </div>
+            <article className="mx-auto max-w-3xl rounded-2xl bg-secondary p-7 md:p-9">
+              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.workingStyle.eyebrow}</p>
+              <h2 className="mt-4 font-serif text-3xl font-semibold">{t.workingStyle.heading}</h2>
+              <p className="mt-5 leading-relaxed text-muted-foreground">{t.workingStyle.paragraph}</p>
+              <div className="mt-7 flex flex-wrap gap-2">
+                {t.workingStyle.tags.map((skill) => <span key={skill} className="rounded-full border border-border bg-background px-3 py-2 text-sm font-semibold">{skill}</span>)}
+              </div>
+            </article>
           </div>
         </section>
 
