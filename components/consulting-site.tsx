@@ -169,9 +169,9 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
           </nav>
 
           <div className="flex items-center gap-2">
-            <div className="hidden items-center gap-1 rounded-full border border-border p-1 sm:flex" aria-label="Language">
-              <a href="/" aria-label="English" title="English" className={`rounded-full px-2.5 py-1.5 text-lg leading-none ${lang === 'en' ? 'bg-primary' : 'hover:bg-secondary'}`} aria-current={lang === 'en' ? 'true' : undefined}>{t.langSwitch.en}</a>
-              <a href="/de" aria-label="Deutsch" title="Deutsch" className={`rounded-full px-2.5 py-1.5 text-lg leading-none ${lang === 'de' ? 'bg-primary' : 'hover:bg-secondary'}`} aria-current={lang === 'de' ? 'true' : undefined}>{t.langSwitch.de}</a>
+            <div className="flex items-center gap-1 rounded-full border border-border p-1" aria-label="Language">
+              <a href="/" aria-label="English" title="English" className={`rounded-full px-2 py-1 text-base leading-none sm:px-2.5 sm:py-1.5 sm:text-lg ${lang === 'en' ? 'bg-primary' : 'hover:bg-secondary'}`} aria-current={lang === 'en' ? 'true' : undefined}>{t.langSwitch.en}</a>
+              <a href="/de" aria-label="Deutsch" title="Deutsch" className={`rounded-full px-2 py-1 text-base leading-none sm:px-2.5 sm:py-1.5 sm:text-lg ${lang === 'de' ? 'bg-primary' : 'hover:bg-secondary'}`} aria-current={lang === 'de' ? 'true' : undefined}>{t.langSwitch.de}</a>
             </div>
 
             <details ref={mobileMenuRef} className="relative md:hidden">
@@ -179,10 +179,6 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 <Menu aria-hidden="true" className="size-5" />
               </summary>
               <div className="fixed right-4 top-[4.75rem] z-50 flex max-h-[calc(100vh-6rem)] w-[19rem] max-w-[calc(100vw-2rem)] flex-col gap-1.5 overflow-y-auto rounded-2xl border border-border bg-background p-2.5 shadow-xl">
-                <div className="flex items-center gap-1 rounded-xl border border-border p-1">
-                  <a href="/" aria-label="English" title="English" className={`flex-1 rounded-lg px-2.5 py-1.5 text-center text-lg leading-none ${lang === 'en' ? 'bg-primary' : ''}`}>{t.langSwitch.en}</a>
-                  <a href="/de" aria-label="Deutsch" title="Deutsch" className={`flex-1 rounded-lg px-2.5 py-1.5 text-center text-lg leading-none ${lang === 'de' ? 'bg-primary' : ''}`}>{t.langSwitch.de}</a>
-                </div>
                 {navLinks.map((link) => (
                   <a key={link.href} href={link.href} onClick={closeMobileMenu} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{link.label}</a>
                 ))}
