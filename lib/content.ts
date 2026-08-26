@@ -6,7 +6,6 @@ export const content = {
       home: 'Home',
       services: 'Services',
       about: 'About',
-      research: 'Research Interests',
       experience: 'Experience',
       faq: 'FAQ',
       contact: 'Contact',
@@ -34,6 +33,11 @@ export const content = {
       heading: 'Expertise that moves work forward.',
       paragraph:
         'Choose focused support for a defined challenge or bring me into a wider programme as a trusted advisor, researcher, educator, or intercultural development practitioner.',
+    },
+    serviceGroupLabels: {
+      advisory: 'Migration, Diaspora & Intercultural Practice',
+      research: 'Research & Higher Education',
+      education: 'Basic Education & Family Support',
     },
     services: {
       'migration-diaspora-advisory': {
@@ -93,6 +97,15 @@ export const content = {
         { theme: 'Diaspora & Belonging', items: ['Diaspora engagement', 'Transnationalism', 'Integration and social inclusion'] },
         { theme: 'Research & Practice', items: ['Qualitative and mixed methods research', 'Intercultural competence and inclusion', 'Education and youth development'] },
       ],
+    },
+    education: {
+      eyebrow: 'School-Based Educational Experience',
+      heading: 'Grounded in ongoing classroom and after-school practice.',
+      p1: 'I have over five years of experience as an educator and educational leader in international school settings, combining classroom teaching, student support, programme leadership, and intercultural education. In addition to my ongoing role as a Class Educator, I previously served as Deputy Head of After-School Programmes (Ganztag), where I helped foster the academic, social, and personal development of students from diverse cultural and migration backgrounds.',
+      p2: "As a Class Educator, I support students' daily learning, provide social and emotional guidance, and lead extracurricular life through the Badminton Club, Afro Club, and Diplomats Club — spaces where students build confidence, teamwork, and cultural awareness outside the regular timetable.",
+      p3: "As Deputy Head of After-School Programmes, I helped coordinate the school's Ganztag offering: scheduling and supervising activities, supporting staff, liaising with parents and school leadership, and ensuring the programme ran safely and reliably for students and families who depended on it.",
+      p4: 'This experience has sharpened my understanding of educational leadership, intercultural understanding in the classroom, student wellbeing, and community engagement — the same foundations I bring to advisory work in basic education, youth development, and family support.',
+      tags: ['Badminton Club', 'Afro Club', 'Diplomats Club', 'After-School Programmes (Ganztag)'],
     },
     experience: {
       eyebrow: 'Background & Experience',
@@ -232,7 +245,6 @@ export const content = {
       home: 'Start',
       services: 'Leistungen',
       about: 'Über mich',
-      research: 'Forschungsschwerpunkte',
       experience: 'Werdegang',
       faq: 'FAQ',
       contact: 'Kontakt',
@@ -260,6 +272,11 @@ export const content = {
       heading: 'Expertise, die Ihre Arbeit voranbringt.',
       paragraph:
         'Nutzen Sie gezielte Unterstützung für eine konkrete Herausforderung, oder binden Sie mich als vertrauenswürdigen Berater, Forscher, Dozenten oder Fachmann für interkulturelle Entwicklung in ein größeres Programm ein.',
+    },
+    serviceGroupLabels: {
+      advisory: 'Migration, Diaspora & Interkulturelle Praxis',
+      research: 'Forschung & Hochschulbildung',
+      education: 'Grundbildung & Familienbegleitung',
     },
     services: {
       'migration-diaspora-advisory': {
@@ -319,6 +336,15 @@ export const content = {
         { theme: 'Diaspora & Zugehörigkeit', items: ['Diaspora-Engagement', 'Transnationalismus', 'Integration und soziale Inklusion'] },
         { theme: 'Forschung & Praxis', items: ['Qualitative und Mixed-Methods-Forschung', 'Interkulturelle Kompetenz und Inklusion', 'Bildung und Jugendentwicklung'] },
       ],
+    },
+    education: {
+      eyebrow: 'Schulische Bildungserfahrung',
+      heading: 'Verwurzelt in laufender Unterrichts- und Ganztagspraxis.',
+      p1: 'Ich verfüge über mehr als fünf Jahre Erfahrung als Pädagoge und pädagogische Führungskraft in internationalen Schulumgebungen und verbinde dabei Unterricht, Schülerbetreuung, Programmleitung und interkulturelle Bildung. Neben meiner fortlaufenden Tätigkeit als Klassenbetreuer war ich zuvor stellvertretender Leiter des Ganztagsprogramms und habe dort die akademische, soziale und persönliche Entwicklung von Schülerinnen und Schülern mit unterschiedlichem kulturellem und migrationsbezogenem Hintergrund gefördert.',
+      p2: 'Als Klassenbetreuer unterstütze ich das tägliche Lernen der Schülerinnen und Schüler, biete soziale und emotionale Begleitung und leite außerschulische Angebote wie den Badminton Club, den Afro Club und den Diplomats Club — Räume, in denen Schülerinnen und Schüler außerhalb des regulären Stundenplans Selbstvertrauen, Teamgeist und kulturelles Bewusstsein entwickeln.',
+      p3: 'Als stellvertretender Leiter des Ganztagsprogramms habe ich das Ganztagsangebot der Schule mitgestaltet: Planung und Beaufsichtigung der Aktivitäten, Unterstützung des Personals, Austausch mit Eltern und Schulleitung sowie die Sicherstellung eines sicheren und verlässlichen Ablaufs für die Schülerinnen, Schüler und Familien, die darauf angewiesen waren.',
+      p4: 'Diese Erfahrung hat mein Verständnis von pädagogischer Führung, interkulturellem Verständnis im Klassenzimmer, dem Wohlergehen von Schülerinnen und Schülern sowie gesellschaftlichem Engagement geschärft — dieselben Grundlagen, die ich in die Beratung in den Bereichen Grundbildung, Jugendentwicklung und Familienbegleitung einbringe.',
+      tags: ['Badminton Club', 'Afro Club', 'Diplomats Club', 'Ganztagsprogramm'],
     },
     experience: {
       eyebrow: 'Werdegang & Erfahrung',

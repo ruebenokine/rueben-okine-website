@@ -38,6 +38,12 @@ const serviceIcons: Record<(typeof serviceOrder)[number], typeof Network> = {
   'intercultural-development': Users,
 }
 
+const serviceGroups = [
+  { key: 'advisory', ids: ['migration-diaspora-advisory', 'intercultural-development'] },
+  { key: 'research', ids: ['research-evaluation', 'higher-education-academia'] },
+  { key: 'education', ids: ['basic-education', 'family-student-support'] },
+] as const
+
 const globalReachIcons = [Globe, Handshake, Compass]
 
 function ArrowLink({ href, children, light = false }: { href: string; children: React.ReactNode; light?: boolean }) {
@@ -62,7 +68,6 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
   const navLinks = [
     { href: '#top', label: t.nav.home },
     { href: '#about', label: t.nav.about },
-    { href: '#research', label: t.nav.research },
     { href: '#experience', label: t.nav.experience },
     { href: '#faq', label: t.nav.faq },
     { href: '#contact', label: t.nav.contact },
@@ -96,11 +101,16 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 {t.nav.services}
                 <ChevronDown aria-hidden="true" className="size-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
               </button>
-              <div className="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 translate-y-1 rounded-2xl border border-border bg-background p-2 opacity-0 shadow-xl transition-all duration-150 group-hover:visible group-hover:translate-y-2 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-2 group-focus-within:opacity-100">
-                {serviceOrder.map((id) => (
-                  <a key={id} href={`#${id}`} className="block rounded-xl px-3 py-2.5 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
-                    {t.services[id].title}
-                  </a>
+              <div className="invisible absolute left-1/2 top-full z-50 w-80 -translate-x-1/2 translate-y-1 rounded-2xl border border-border bg-background p-2 opacity-0 shadow-xl transition-all duration-150 group-hover:visible group-hover:translate-y-2 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-2 group-focus-within:opacity-100">
+                {serviceGroups.map((group) => (
+                  <div key={group.key} className="px-1 py-1">
+                    <p className="px-2 pb-1 pt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">{t.serviceGroupLabels[group.key]}</p>
+                    {group.ids.map((id) => (
+                      <a key={id} href={`#${id}`} className="block rounded-xl px-3 py-2.5 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
+                        {t.services[id].title}
+                      </a>
+                    ))}
+                  </div>
                 ))}
                 <a href="#speaking" className="mt-1 block rounded-xl border-t border-border px-3 pb-2.5 pt-3 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
                   {t.speaking.navLabel}
@@ -109,7 +119,6 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
             </div>
 
             <a className="hover:text-primary" href="#about">{t.nav.about}</a>
-            <a className="hover:text-primary" href="#research">{t.nav.research}</a>
             <a className="hover:text-primary" href="#experience">{t.nav.experience}</a>
             <a className="hover:text-primary" href="#faq">{t.nav.faq}</a>
             <a className="hover:text-primary" href="#contact">{t.nav.contact}</a>
@@ -134,8 +143,13 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                   <a key={link.href} href={link.href} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{link.label}</a>
                 ))}
                 <p className="px-3 pb-1 pt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">{t.nav.services}</p>
-                {serviceOrder.map((id) => (
-                  <a key={id} href={`#${id}`} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{t.services[id].title}</a>
+                {serviceGroups.map((group) => (
+                  <div key={group.key}>
+                    <p className="px-3 pb-1 pt-2 text-[11px] font-bold uppercase tracking-wider text-muted-foreground/70">{t.serviceGroupLabels[group.key]}</p>
+                    {group.ids.map((id) => (
+                      <a key={id} href={`#${id}`} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{t.services[id].title}</a>
+                    ))}
+                  </div>
                 ))}
                 <a href="#speaking" className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{t.speaking.navLabel}</a>
               </div>
@@ -212,73 +226,98 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
               <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.servicesHeading.heading}</h2>
               <p className="text-lg leading-relaxed text-muted-foreground">{t.servicesHeading.paragraph}</p>
             </div>
-            <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {serviceOrder.map((id) => {
-                const service = t.services[id]
-                const Icon = serviceIcons[id]
-                return (
-                  <article key={id} id={id} className="scroll-mt-24 flex flex-col rounded-2xl border border-border bg-card p-7 transition-transform hover:-translate-y-1 md:p-8">
-                    <Icon aria-hidden="true" className="size-8 text-primary" />
-                    <h3 className="mt-7 font-serif text-2xl font-semibold">{service.title}</h3>
-                    <p className="mt-4 min-h-28 leading-relaxed text-muted-foreground">{service.description}</p>
-                    <ul className="mt-6 flex flex-col gap-3 border-t border-border pt-6">
-                      {service.deliverables.map((item) => <li key={item} className="flex gap-3 text-sm font-medium"><Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-primary" />{item}</li>)}
-                    </ul>
-                  </article>
-                )
-              })}
+            <div className="mt-12 flex flex-col gap-14">
+              {serviceGroups.map((group) => (
+                <div key={group.key}>
+                  <p className="mb-5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">{t.serviceGroupLabels[group.key]}</p>
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    {group.ids.map((id) => {
+                      const service = t.services[id]
+                      const Icon = serviceIcons[id]
+                      return (
+                        <article key={id} id={id} className="scroll-mt-24 flex flex-col rounded-2xl border border-border bg-card p-7 transition-transform hover:-translate-y-1 md:p-8">
+                          <Icon aria-hidden="true" className="size-8 text-primary" />
+                          <h3 className="mt-7 font-serif text-2xl font-semibold">{service.title}</h3>
+                          <p className="mt-4 min-h-28 leading-relaxed text-muted-foreground">{service.description}</p>
+                          <ul className="mt-6 flex flex-col gap-3 border-t border-border pt-6">
+                            {service.deliverables.map((item) => <li key={item} className="flex gap-3 text-sm font-medium"><Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-primary" />{item}</li>)}
+                          </ul>
+                        </article>
+                      )
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="education" className="scroll-mt-24 bg-secondary py-20 md:py-24">
+          <div className="mx-auto max-w-5xl px-5 lg:px-8">
+            <div className="flex flex-col gap-6">
+              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.education.eyebrow}</p>
+              <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.education.heading}</h2>
+              <p className="text-xl leading-relaxed text-foreground">{t.education.p1}</p>
+              <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p2}</p>
+              <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p3}</p>
+              <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p4}</p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {t.education.tags.map((tag) => (
+                  <span key={tag} className="rounded-full border border-border bg-background px-3 py-2 text-sm font-semibold">{tag}</span>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         <section id="about" className="scroll-mt-24 bg-primary py-20 text-primary-foreground md:py-28">
-          <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 lg:gap-20 lg:px-8">
-            <div className="overflow-hidden rounded-[2rem] border-8 border-primary-foreground/15">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8586-Li4Uz9nvqLctT1n4YZ449ofcFKZAza.jpeg"
-                alt="Dr. Rueben Okine seated outdoors in Berlin"
-                width={1125}
-                height={750}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="aspect-[4/3] w-full object-cover"
-              />
-            </div>
-            <div className="flex flex-col items-start gap-6">
-              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary-foreground/75">{t.about.eyebrow}</p>
-              <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.about.heading}</h2>
-              <p className="text-lg leading-relaxed text-primary-foreground/80">{t.about.p1}</p>
-              <p className="leading-relaxed text-primary-foreground/80">{t.about.p2}</p>
-              <p className="leading-relaxed text-primary-foreground/80">{t.about.p3}</p>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <p className="flex gap-3 font-semibold"><Users aria-hidden="true" className="size-5 shrink-0" /> {t.about.pill1}</p>
-                <p className="flex gap-3 font-semibold"><BookOpen aria-hidden="true" className="size-5 shrink-0" /> {t.about.pill2}</p>
-              </div>
-              <ArrowLink light href={`mailto:${email}?subject=Potential%20collaboration`}>{t.about.cta}</ArrowLink>
-            </div>
-          </div>
-        </section>
-
-        <section id="research" className="scroll-mt-24 bg-background py-20 md:py-24" aria-labelledby="expertise-heading">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="max-w-3xl">
-              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.research.eyebrow}</p>
-              <h2 id="expertise-heading" className="mt-4 font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.research.heading}</h2>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{t.research.subheading}</p>
-            </div>
-            <div className="mt-10 grid gap-6 sm:grid-cols-2" aria-label="Academic and research focus areas, by theme">
-              {t.research.groups.map((group) => (
-                <div key={group.theme} className="rounded-2xl border border-border bg-secondary p-6">
-                  <h3 className="font-serif text-lg font-semibold text-primary">{group.theme}</h3>
-                  <ul className="mt-4 flex flex-col gap-2.5">
-                    {group.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5 text-sm font-medium leading-snug">
-                        <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-primary" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+            <div className="grid items-start gap-12 md:grid-cols-2 lg:gap-20">
+              <div className="overflow-hidden rounded-[2rem] border-8 border-primary-foreground/15">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8586-Li4Uz9nvqLctT1n4YZ449ofcFKZAza.jpeg"
+                  alt="Dr. Rueben Okine seated outdoors in Berlin"
+                  width={1125}
+                  height={750}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
+              <div className="flex flex-col items-start gap-6">
+                <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary-foreground/75">{t.about.eyebrow}</p>
+                <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.about.heading}</h2>
+                <p className="text-lg leading-relaxed text-primary-foreground/80">{t.about.p1}</p>
+                <p className="leading-relaxed text-primary-foreground/80">{t.about.p2}</p>
+                <p className="leading-relaxed text-primary-foreground/80">{t.about.p3}</p>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <p className="flex gap-3 font-semibold"><Users aria-hidden="true" className="size-5 shrink-0" /> {t.about.pill1}</p>
+                  <p className="flex gap-3 font-semibold"><BookOpen aria-hidden="true" className="size-5 shrink-0" /> {t.about.pill2}</p>
                 </div>
-              ))}
+                <ArrowLink light href={`mailto:${email}?subject=Potential%20collaboration`}>{t.about.cta}</ArrowLink>
+              </div>
+            </div>
+
+            <div className="mt-16 border-t border-primary-foreground/15 pt-14 md:mt-20 md:pt-16">
+              <div className="max-w-3xl">
+                <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary-foreground/75">{t.research.eyebrow}</p>
+                <h3 className="mt-4 font-serif text-3xl font-semibold tracking-tight text-balance md:text-4xl">{t.research.heading}</h3>
+                <p className="mt-4 text-lg leading-relaxed text-primary-foreground/80">{t.research.subheading}</p>
+              </div>
+              <div className="mt-10 grid gap-6 sm:grid-cols-2" aria-label="Academic and research focus areas, by theme">
+                {t.research.groups.map((group) => (
+                  <div key={group.theme} className="rounded-2xl border border-primary-foreground/20 bg-primary-foreground/10 p-6">
+                    <h4 className="font-serif text-lg font-semibold text-primary-foreground">{group.theme}</h4>
+                    <ul className="mt-4 flex flex-col gap-2.5">
+                      {group.items.map((item) => (
+                        <li key={item} className="flex items-start gap-2.5 text-sm font-medium leading-snug text-primary-foreground/85">
+                          <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
