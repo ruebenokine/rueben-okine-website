@@ -252,72 +252,30 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
           </div>
         </section>
 
-        <section id="education" className="scroll-mt-24 bg-secondary py-20 md:py-24">
-          <div className="mx-auto max-w-5xl px-5 lg:px-8">
-            <div className="flex flex-col gap-6">
-              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.education.eyebrow}</p>
-              <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.education.heading}</h2>
-              <p className="text-xl leading-relaxed text-foreground">{t.education.p1}</p>
-              <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p2}</p>
-              <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p3}</p>
-              <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p4}</p>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {t.education.tags.map((tag) => (
-                  <span key={tag} className="rounded-full border border-border bg-background px-3 py-2 text-sm font-semibold">{tag}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="about" className="scroll-mt-24 bg-primary py-20 text-primary-foreground md:py-28">
-          <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="grid items-start gap-12 md:grid-cols-2 lg:gap-20">
-              <div className="overflow-hidden rounded-[2rem] border-8 border-primary-foreground/15">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8586-Li4Uz9nvqLctT1n4YZ449ofcFKZAza.jpeg"
-                  alt="Dr. Rueben Okine seated outdoors in Berlin"
-                  width={1125}
-                  height={750}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="aspect-[4/3] w-full object-cover"
-                />
-              </div>
-              <div className="flex flex-col items-start gap-6">
-                <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary-foreground/75">{t.about.eyebrow}</p>
-                <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.about.heading}</h2>
-                <p className="text-lg leading-relaxed text-primary-foreground/80">{t.about.p1}</p>
-                <p className="leading-relaxed text-primary-foreground/80">{t.about.p2}</p>
-                <p className="leading-relaxed text-primary-foreground/80">{t.about.p3}</p>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <p className="flex gap-3 font-semibold"><Users aria-hidden="true" className="size-5 shrink-0" /> {t.about.pill1}</p>
-                  <p className="flex gap-3 font-semibold"><BookOpen aria-hidden="true" className="size-5 shrink-0" /> {t.about.pill2}</p>
-                </div>
-                <ArrowLink light href={`mailto:${email}?subject=Potential%20collaboration`}>{t.about.cta}</ArrowLink>
-              </div>
+          <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 lg:gap-20 lg:px-8">
+            <div className="overflow-hidden rounded-[2rem] border-8 border-primary-foreground/15">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8586-Li4Uz9nvqLctT1n4YZ449ofcFKZAza.jpeg"
+                alt="Dr. Rueben Okine seated outdoors in Berlin"
+                width={1125}
+                height={750}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="aspect-[4/3] w-full object-cover"
+              />
             </div>
-
-            <div className="mt-16 border-t border-primary-foreground/15 pt-14 md:mt-20 md:pt-16">
-              <div className="max-w-3xl">
-                <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary-foreground/75">{t.research.eyebrow}</p>
-                <h3 className="mt-4 font-serif text-3xl font-semibold tracking-tight text-balance md:text-4xl">{t.research.heading}</h3>
-                <p className="mt-4 text-lg leading-relaxed text-primary-foreground/80">{t.research.subheading}</p>
+            <div className="flex flex-col items-start gap-6">
+              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary-foreground/75">{t.about.eyebrow}</p>
+              <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.about.heading}</h2>
+              <p className="text-lg leading-relaxed text-primary-foreground/80">{t.about.p1}</p>
+              <p className="leading-relaxed text-primary-foreground/80">{t.about.p2}</p>
+              <p className="leading-relaxed text-primary-foreground/80">{t.about.p3}</p>
+              <p className="leading-relaxed text-primary-foreground/80">{t.about.p4}</p>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <p className="flex gap-3 font-semibold"><Users aria-hidden="true" className="size-5 shrink-0" /> {t.about.pill1}</p>
+                <p className="flex gap-3 font-semibold"><BookOpen aria-hidden="true" className="size-5 shrink-0" /> {t.about.pill2}</p>
               </div>
-              <div className="mt-10 grid gap-6 sm:grid-cols-2" aria-label="Academic and research focus areas, by theme">
-                {t.research.groups.map((group) => (
-                  <div key={group.theme} className="rounded-2xl border border-primary-foreground/20 bg-primary-foreground/10 p-6">
-                    <h4 className="font-serif text-lg font-semibold text-primary-foreground">{group.theme}</h4>
-                    <ul className="mt-4 flex flex-col gap-2.5">
-                      {group.items.map((item) => (
-                        <li key={item} className="flex items-start gap-2.5 text-sm font-medium leading-snug text-primary-foreground/85">
-                          <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
+              <ArrowLink light href={`mailto:${email}?subject=Potential%20collaboration`}>{t.about.cta}</ArrowLink>
             </div>
           </div>
         </section>
@@ -334,6 +292,40 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
               <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p5}</p>
               <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p6}</p>
               <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p7}</p>
+            </div>
+
+            <div id="research" className="mt-16 scroll-mt-24 border-t border-border pt-14 md:mt-20 md:pt-16">
+              <div className="max-w-3xl">
+                <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.research.eyebrow}</p>
+                <h3 className="mt-4 font-serif text-3xl font-semibold tracking-tight text-balance md:text-4xl">{t.research.heading}</h3>
+                <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{t.research.subheading}</p>
+              </div>
+              <div className="mt-10 grid gap-6 sm:grid-cols-2" aria-label="Academic and research focus areas, by theme">
+                {t.research.groups.map((group) => (
+                  <div key={group.theme} className="rounded-2xl border border-border bg-background p-6">
+                    <h4 className="font-serif text-lg font-semibold text-primary">{group.theme}</h4>
+                    <ul className="mt-4 flex flex-col gap-2.5">
+                      {group.items.map((item) => (
+                        <li key={item} className="flex items-start gap-2.5 text-sm font-medium leading-snug">
+                          <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-primary" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div id="education" className="mt-16 scroll-mt-24 border-t border-border pt-14 md:mt-20 md:pt-16">
+              <div className="flex flex-col gap-6">
+                <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.education.eyebrow}</p>
+                <h3 className="font-serif text-3xl font-semibold tracking-tight text-balance md:text-4xl">{t.education.heading}</h3>
+                <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p1}</p>
+                <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p2}</p>
+                <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p3}</p>
+                <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p4}</p>
+              </div>
             </div>
           </div>
         </section>
