@@ -237,7 +237,7 @@ export const content = {
       emailLabel: 'Email',
       location: 'Berlin, Germany',
     },
-    langSwitch: { en: 'EN', de: 'DE' },
+    langSwitch: { en: '🇬🇧', de: '🇩🇪' },
     skipLink: 'Skip to main content',
   },
   de: {
@@ -476,7 +476,7 @@ export const content = {
       emailLabel: 'E-Mail',
       location: 'Berlin, Deutschland',
     },
-    langSwitch: { en: 'EN', de: 'DE' },
+    langSwitch: { en: '🇬🇧', de: '🇩🇪' },
     skipLink: 'Zum Hauptinhalt springen',
   },
 } as const

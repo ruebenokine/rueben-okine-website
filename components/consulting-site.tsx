@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import {
   ArrowRight,
@@ -73,6 +76,32 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
     { href: '#contact', label: t.nav.contact },
   ]
 
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const servicesRef = useRef<HTMLDivElement>(null)
+  const mobileMenuRef = useRef<HTMLDetailsElement>(null)
+
+  useEffect(() => {
+    if (!servicesOpen) return
+    function handleClickOutside(event: MouseEvent) {
+      if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
+        setServicesOpen(false)
+      }
+    }
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') setServicesOpen(false)
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [servicesOpen])
+
+  function closeMobileMenu() {
+    if (mobileMenuRef.current) mobileMenuRef.current.open = false
+  }
+
   return (
     <>
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-4 focus:py-3 focus:text-primary-foreground">
@@ -96,23 +125,38 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
           <nav aria-label="Primary navigation" className="hidden items-center gap-7 text-sm font-semibold md:flex">
             <a className="hover:text-primary" href="#top">{t.nav.home}</a>
 
-            <div className="group relative">
-              <button type="button" className="flex items-center gap-1 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" aria-haspopup="true">
+            <div
+              ref={servicesRef}
+              className="relative"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              <button
+                type="button"
+                className="flex items-center gap-1 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+                aria-haspopup="true"
+                aria-expanded={servicesOpen}
+                onClick={() => setServicesOpen((open) => !open)}
+              >
                 {t.nav.services}
-                <ChevronDown aria-hidden="true" className="size-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
+                <ChevronDown aria-hidden="true" className={`size-3.5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              <div className="invisible absolute left-1/2 top-full z-50 flex w-80 -translate-x-1/2 translate-y-1 flex-col gap-1.5 rounded-2xl border border-border bg-background p-2 opacity-0 shadow-xl transition-all duration-150 group-hover:visible group-hover:translate-y-2 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-2 group-focus-within:opacity-100">
+              <div
+                className={`absolute left-1/2 top-full z-50 flex w-80 -translate-x-1/2 translate-y-1 flex-col gap-1.5 rounded-2xl border border-border bg-background p-2 shadow-xl transition-all duration-150 ${
+                  servicesOpen ? 'visible translate-y-2 opacity-100' : 'invisible opacity-0'
+                }`}
+              >
                 {serviceGroups.map((group) => (
                   <div key={group.key} className="rounded-xl bg-secondary/70 p-2">
                     <p className="px-2 pb-1.5 pt-1 text-[13px] font-bold leading-snug text-primary">{t.serviceGroupLabels[group.key]}</p>
                     {group.ids.map((id) => (
-                      <a key={id} href={`#${id}`} className="block rounded-lg px-2 py-2 text-sm font-semibold text-foreground hover:bg-background hover:text-primary">
+                      <a key={id} href={`#${id}`} onClick={() => setServicesOpen(false)} className="block rounded-lg px-2 py-2 text-sm font-semibold text-foreground hover:bg-background hover:text-primary">
                         {t.services[id].title}
                       </a>
                     ))}
                   </div>
                 ))}
-                <a href="#speaking" className="block rounded-xl border-t border-border px-3 pb-1 pt-3 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
+                <a href="#speaking" onClick={() => setServicesOpen(false)} className="block rounded-xl border-t border-border px-3 pb-1 pt-3 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
                   {t.speaking.navLabel}
                 </a>
               </div>
@@ -125,33 +169,33 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
           </nav>
 
           <div className="flex items-center gap-2">
-            <div className="hidden items-center gap-1 rounded-full border border-border p-1 text-xs font-bold sm:flex" aria-label="Language">
-              <a href="/" className={`rounded-full px-2.5 py-1.5 ${lang === 'en' ? 'bg-primary text-primary-foreground' : 'hover:bg-secondary'}`} aria-current={lang === 'en' ? 'true' : undefined}>{t.langSwitch.en}</a>
-              <a href="/de" className={`rounded-full px-2.5 py-1.5 ${lang === 'de' ? 'bg-primary text-primary-foreground' : 'hover:bg-secondary'}`} aria-current={lang === 'de' ? 'true' : undefined}>{t.langSwitch.de}</a>
+            <div className="hidden items-center gap-1 rounded-full border border-border p-1 sm:flex" aria-label="Language">
+              <a href="/" aria-label="English" title="English" className={`rounded-full px-2.5 py-1.5 text-lg leading-none ${lang === 'en' ? 'bg-primary' : 'hover:bg-secondary'}`} aria-current={lang === 'en' ? 'true' : undefined}>{t.langSwitch.en}</a>
+              <a href="/de" aria-label="Deutsch" title="Deutsch" className={`rounded-full px-2.5 py-1.5 text-lg leading-none ${lang === 'de' ? 'bg-primary' : 'hover:bg-secondary'}`} aria-current={lang === 'de' ? 'true' : undefined}>{t.langSwitch.de}</a>
             </div>
 
-            <details className="relative md:hidden">
+            <details ref={mobileMenuRef} className="relative md:hidden">
               <summary className="flex size-11 cursor-pointer list-none items-center justify-center rounded-full border border-border marker:content-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" aria-label={t.nav.menuLabel}>
                 <Menu aria-hidden="true" className="size-5" />
               </summary>
               <div className="fixed right-4 top-[4.75rem] z-50 flex max-h-[calc(100vh-6rem)] w-[19rem] max-w-[calc(100vw-2rem)] flex-col gap-1.5 overflow-y-auto rounded-2xl border border-border bg-background p-2.5 shadow-xl">
-                <div className="flex items-center gap-1 rounded-xl border border-border p-1 text-xs font-bold">
-                  <a href="/" className={`flex-1 rounded-lg px-2.5 py-1.5 text-center ${lang === 'en' ? 'bg-primary text-primary-foreground' : ''}`}>{t.langSwitch.en}</a>
-                  <a href="/de" className={`flex-1 rounded-lg px-2.5 py-1.5 text-center ${lang === 'de' ? 'bg-primary text-primary-foreground' : ''}`}>{t.langSwitch.de}</a>
+                <div className="flex items-center gap-1 rounded-xl border border-border p-1">
+                  <a href="/" aria-label="English" title="English" className={`flex-1 rounded-lg px-2.5 py-1.5 text-center text-lg leading-none ${lang === 'en' ? 'bg-primary' : ''}`}>{t.langSwitch.en}</a>
+                  <a href="/de" aria-label="Deutsch" title="Deutsch" className={`flex-1 rounded-lg px-2.5 py-1.5 text-center text-lg leading-none ${lang === 'de' ? 'bg-primary' : ''}`}>{t.langSwitch.de}</a>
                 </div>
                 {navLinks.map((link) => (
-                  <a key={link.href} href={link.href} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{link.label}</a>
+                  <a key={link.href} href={link.href} onClick={closeMobileMenu} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{link.label}</a>
                 ))}
                 <p className="px-2 pb-1 pt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">{t.nav.services}</p>
                 {serviceGroups.map((group) => (
                   <div key={group.key} className="rounded-xl bg-secondary/70 p-2">
                     <p className="px-1 pb-1.5 pt-1 text-[13px] font-bold leading-snug text-primary">{t.serviceGroupLabels[group.key]}</p>
                     {group.ids.map((id) => (
-                      <a key={id} href={`#${id}`} className="block rounded-lg px-2 py-2.5 text-sm font-semibold hover:bg-background hover:text-primary">{t.services[id].title}</a>
+                      <a key={id} href={`#${id}`} onClick={closeMobileMenu} className="block rounded-lg px-2 py-2.5 text-sm font-semibold hover:bg-background hover:text-primary">{t.services[id].title}</a>
                     ))}
                   </div>
                 ))}
-                <a href="#speaking" className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{t.speaking.navLabel}</a>
+                <a href="#speaking" onClick={closeMobileMenu} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{t.speaking.navLabel}</a>
               </div>
             </details>
             <a href={`mailto:${email}?subject=Project%20inquiry`} className="inline-flex min-h-11 items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
