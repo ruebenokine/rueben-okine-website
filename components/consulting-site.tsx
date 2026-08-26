@@ -101,18 +101,18 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 {t.nav.services}
                 <ChevronDown aria-hidden="true" className="size-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
               </button>
-              <div className="invisible absolute left-1/2 top-full z-50 w-80 -translate-x-1/2 translate-y-1 rounded-2xl border border-border bg-background p-2 opacity-0 shadow-xl transition-all duration-150 group-hover:visible group-hover:translate-y-2 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-2 group-focus-within:opacity-100">
+              <div className="invisible absolute left-1/2 top-full z-50 flex w-80 -translate-x-1/2 translate-y-1 flex-col gap-1.5 rounded-2xl border border-border bg-background p-2 opacity-0 shadow-xl transition-all duration-150 group-hover:visible group-hover:translate-y-2 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-2 group-focus-within:opacity-100">
                 {serviceGroups.map((group) => (
-                  <div key={group.key} className="px-1 py-1">
-                    <p className="px-2 pb-1 pt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">{t.serviceGroupLabels[group.key]}</p>
+                  <div key={group.key} className="rounded-xl bg-secondary/70 p-2">
+                    <p className="px-2 pb-1.5 pt-1 text-[13px] font-bold leading-snug text-primary">{t.serviceGroupLabels[group.key]}</p>
                     {group.ids.map((id) => (
-                      <a key={id} href={`#${id}`} className="block rounded-xl px-3 py-2.5 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
+                      <a key={id} href={`#${id}`} className="block rounded-lg px-2 py-2 text-sm font-semibold text-foreground hover:bg-background hover:text-primary">
                         {t.services[id].title}
                       </a>
                     ))}
                   </div>
                 ))}
-                <a href="#speaking" className="mt-1 block rounded-xl border-t border-border px-3 pb-2.5 pt-3 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
+                <a href="#speaking" className="block rounded-xl border-t border-border px-3 pb-1 pt-3 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
                   {t.speaking.navLabel}
                 </a>
               </div>
@@ -134,7 +134,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
               <summary className="flex size-11 cursor-pointer list-none items-center justify-center rounded-full border border-border marker:content-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" aria-label={t.nav.menuLabel}>
                 <Menu aria-hidden="true" className="size-5" />
               </summary>
-              <div className="fixed right-5 top-[4.75rem] z-50 flex max-h-[calc(100vh-6rem)] w-60 max-w-[calc(100vw-2.5rem)] flex-col gap-1 overflow-y-auto rounded-2xl border border-border bg-background p-2 shadow-xl">
+              <div className="fixed right-4 top-[4.75rem] z-50 flex max-h-[calc(100vh-6rem)] w-[19rem] max-w-[calc(100vw-2rem)] flex-col gap-1.5 overflow-y-auto rounded-2xl border border-border bg-background p-2.5 shadow-xl">
                 <div className="flex items-center gap-1 rounded-xl border border-border p-1 text-xs font-bold">
                   <a href="/" className={`flex-1 rounded-lg px-2.5 py-1.5 text-center ${lang === 'en' ? 'bg-primary text-primary-foreground' : ''}`}>{t.langSwitch.en}</a>
                   <a href="/de" className={`flex-1 rounded-lg px-2.5 py-1.5 text-center ${lang === 'de' ? 'bg-primary text-primary-foreground' : ''}`}>{t.langSwitch.de}</a>
@@ -142,12 +142,12 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 {navLinks.map((link) => (
                   <a key={link.href} href={link.href} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{link.label}</a>
                 ))}
-                <p className="px-3 pb-1 pt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">{t.nav.services}</p>
+                <p className="px-2 pb-1 pt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">{t.nav.services}</p>
                 {serviceGroups.map((group) => (
-                  <div key={group.key}>
-                    <p className="px-3 pb-1 pt-2 text-[11px] font-bold uppercase tracking-wider text-muted-foreground/70">{t.serviceGroupLabels[group.key]}</p>
+                  <div key={group.key} className="rounded-xl bg-secondary/70 p-2">
+                    <p className="px-1 pb-1.5 pt-1 text-[13px] font-bold leading-snug text-primary">{t.serviceGroupLabels[group.key]}</p>
                     {group.ids.map((id) => (
-                      <a key={id} href={`#${id}`} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{t.services[id].title}</a>
+                      <a key={id} href={`#${id}`} className="block rounded-lg px-2 py-2.5 text-sm font-semibold hover:bg-background hover:text-primary">{t.services[id].title}</a>
                     ))}
                   </div>
                 ))}
