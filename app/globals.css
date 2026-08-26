@@ -18,6 +18,8 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-accent: var(--accent-warm);
+  --color-accent-foreground: var(--accent-warm-foreground);
   --radius-sm: calc(var(--radius) * .65);
   --radius-md: calc(var(--radius) * .8);
   --radius-lg: var(--radius);
@@ -40,6 +42,8 @@
   --border: oklch(0.86 0.04 235);
   --input: oklch(0.72 0.055 238);
   --ring: oklch(0.43 0.13 244);
+  --accent-warm: oklch(0.74 0.15 70);
+  --accent-warm-foreground: oklch(0.22 0.04 70);
   --radius: 0.85rem;
 }
 

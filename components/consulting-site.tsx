@@ -102,6 +102,9 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                     {t.services[id].title}
                   </a>
                 ))}
+                <a href="#speaking" className="mt-1 block rounded-xl border-t border-border px-3 pb-2.5 pt-3 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
+                  {t.speaking.navLabel}
+                </a>
               </div>
             </div>
 
@@ -134,6 +137,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 {serviceOrder.map((id) => (
                   <a key={id} href={`#${id}`} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{t.services[id].title}</a>
                 ))}
+                <a href="#speaking" className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{t.speaking.navLabel}</a>
               </div>
             </details>
             <a href={`mailto:${email}?subject=Project%20inquiry`} className="inline-flex min-h-11 items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
@@ -191,7 +195,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 const Icon = globalReachIcons[index]
                 return (
                   <div key={item.title} className="flex flex-col gap-2">
-                    <Icon aria-hidden="true" className="size-6 text-[oklch(0.78_0.1_235)]" />
+                    <Icon aria-hidden="true" className="size-6 text-accent" />
                     <strong className="font-serif text-xl font-semibold">{item.title}</strong>
                     <span className="text-sm leading-snug text-[oklch(0.97_0.008_235)]/70">{item.text}</span>
                   </div>
@@ -321,6 +325,49 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
           </div>
         </section>
 
+        <section id="speaking" className="scroll-mt-24 bg-secondary py-20 md:py-28">
+          <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 lg:gap-20 lg:px-8">
+            <div className="flex flex-col gap-4">
+              <div className="overflow-hidden rounded-[2rem] border-8 border-background shadow-xl">
+                <Image
+                  src="/images/speaking-microphone.jpg"
+                  alt="Dr. Rueben Okine speaking into a microphone at a public event"
+                  width={1400}
+                  height={758}
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                  className="aspect-[16/9] w-full object-cover"
+                />
+              </div>
+              <div className="overflow-hidden rounded-[2rem] border-8 border-background shadow-xl">
+                <Image
+                  src="/images/speaking-lecture-hall.jpg"
+                  alt="Dr. Rueben Okine presenting at a university lecture hall"
+                  width={1400}
+                  height={1867}
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                  className="aspect-[3/4] w-full object-cover object-top"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col items-start gap-6">
+              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.speaking.eyebrow}</p>
+              <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.speaking.heading}</h2>
+              <p className="text-lg leading-relaxed text-muted-foreground">{t.speaking.p1}</p>
+              <p className="leading-relaxed text-muted-foreground">{t.speaking.p2}</p>
+              <p className="leading-relaxed text-muted-foreground">{t.speaking.p3}</p>
+              <div className="w-full rounded-2xl border border-border bg-background p-6">
+                <p className="font-serif text-lg font-semibold">{t.speaking.formatsHeading}</p>
+                <ul className="mt-4 flex flex-col gap-3">
+                  {t.speaking.formats.map((item) => (
+                    <li key={item} className="flex gap-3 text-sm font-medium"><Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent" />{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <ArrowLink href={`mailto:${email}?subject=Speaking%20engagement%20inquiry`}>{t.speaking.cta}</ArrowLink>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-background py-20 md:py-28">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <article className="mx-auto max-w-3xl rounded-2xl bg-secondary p-7 md:p-9">
@@ -343,7 +390,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
             <ol className="mt-10 grid gap-5 md:grid-cols-3">
               {t.engagement.steps.map((step, index) => (
                 <li key={step.title} className="flex gap-4 rounded-2xl bg-background p-6">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary font-mono font-bold text-primary-foreground">{index + 1}</span>
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-accent font-mono font-bold text-accent-foreground">{index + 1}</span>
                   <div><h3 className="font-serif text-xl font-semibold">{step.title}</h3><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.text}</p></div>
                 </li>
               ))}
@@ -363,7 +410,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 <details key={question} className="group border-b border-border py-6">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-serif text-xl font-semibold marker:content-none">
                     {question}
-                    <span aria-hidden="true" className="text-primary transition-transform group-open:rotate-45">+</span>
+                    <span aria-hidden="true" className="text-accent transition-transform group-open:rotate-45">+</span>
                   </summary>
                   <p className="max-w-3xl pt-4 leading-relaxed text-muted-foreground">{answer}</p>
                 </details>
