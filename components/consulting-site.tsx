@@ -7,10 +7,7 @@ import {
   BookOpen,
   Check,
   ChevronDown,
-  Compass,
   GraduationCap,
-  Globe,
-  Handshake,
   Mail,
   Menu,
   MapPin,
@@ -46,8 +43,6 @@ const serviceGroups = [
   { key: 'research', ids: ['research-evaluation', 'higher-education-academia'] },
   { key: 'education', ids: ['basic-education', 'family-student-support'] },
 ] as const
-
-const globalReachIcons = [Globe, Handshake, Compass]
 
 function ArrowLink({ href, children, light = false }: { href: string; children: React.ReactNode; light?: boolean }) {
   return (
@@ -242,23 +237,6 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
           </div>
         </section>
 
-        <section aria-label="Global reach" className="bg-[oklch(0.16_0.02_255)] py-14 text-[oklch(0.97_0.008_235)] md:py-16">
-          <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="grid gap-8 sm:grid-cols-3">
-              {t.globalReach.map((item, index) => {
-                const Icon = globalReachIcons[index]
-                return (
-                  <div key={item.title} className="flex flex-col gap-2">
-                    <Icon aria-hidden="true" className="size-6 text-accent" />
-                    <strong className="font-serif text-xl font-semibold">{item.title}</strong>
-                    <span className="text-sm leading-snug text-[oklch(0.97_0.008_235)]/70">{item.text}</span>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        </section>
-
         <section id="services" className="scroll-mt-24 bg-background py-20 md:py-28">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="flex max-w-3xl flex-col gap-4">
@@ -307,7 +285,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
             <div className="flex flex-col items-start gap-6">
               <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary-foreground/75">{t.about.eyebrow}</p>
               <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.about.heading}</h2>
-              <p className="text-lg leading-relaxed text-primary-foreground/80">{t.about.p1}</p>
+              <p className="leading-relaxed text-primary-foreground/80">{t.about.p1}</p>
               <p className="leading-relaxed text-primary-foreground/80">{t.about.p2}</p>
               <p className="leading-relaxed text-primary-foreground/80">{t.about.p3}</p>
               <p className="leading-relaxed text-primary-foreground/80">{t.about.p4}</p>
@@ -325,7 +303,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
             <div className="flex flex-col gap-6">
               <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.experience.eyebrow}</p>
               <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.experience.heading}</h2>
-              <p className="text-xl leading-relaxed text-foreground">{t.experience.p1}</p>
+              <p className="text-lg leading-relaxed text-foreground">{t.experience.p1}</p>
               <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p2}</p>
               <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p3}</p>
               <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p4}</p>
@@ -423,7 +401,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
             <div className="flex flex-col items-start gap-6">
               <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.speaking.eyebrow}</p>
               <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.speaking.heading}</h2>
-              <p className="text-lg leading-relaxed text-muted-foreground">{t.speaking.p1}</p>
+              <p className="leading-relaxed text-muted-foreground">{t.speaking.p1}</p>
               <p className="leading-relaxed text-muted-foreground">{t.speaking.p2}</p>
               <p className="leading-relaxed text-muted-foreground">{t.speaking.p3}</p>
               <div className="w-full rounded-2xl border border-border bg-background p-6">

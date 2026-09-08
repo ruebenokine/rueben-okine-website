@@ -11,6 +11,29 @@ export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: { default: siteConfig.title, template: `%s | ${siteConfig.name}` },
   description: siteConfig.description,
+  alternates: {
+    canonical: '/',
+    languages: {
+      en: '/',
+      de: '/de',
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_GB',
+    alternateLocale: 'de_DE',
+    url: '/',
+    siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [{ url: siteConfig.image }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [siteConfig.image],
+  },
 }
 
 export const viewport: Viewport = {

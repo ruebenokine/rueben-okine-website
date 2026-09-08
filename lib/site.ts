@@ -22,8 +22,7 @@ export const siteConfig = {
 
 export function getSiteUrl() {
   const explicitUrl = process.env.NEXT_PUBLIC_SITE_URL
-  const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL
-  const url = explicitUrl || (vercelUrl ? `https://${vercelUrl}` : 'http://localhost:3000')
+  const url = explicitUrl || 'https://ruebenokine.com'
 
   return new URL(url)
 }
