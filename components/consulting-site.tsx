@@ -4,13 +4,11 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import {
   ArrowRight,
-  BookOpen,
   Check,
   ChevronDown,
   Mail,
   Menu,
   MapPin,
-  Users,
 } from 'lucide-react'
 import { ContactForm } from '@/components/contact-form'
 import { content, type Lang } from '@/lib/content'
@@ -264,12 +262,17 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
               <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.about.heading}</h2>
               <p className="leading-relaxed text-muted-foreground">{t.about.p1}</p>
               <p className="leading-relaxed text-muted-foreground">{t.about.p2}</p>
-              <p className="leading-relaxed text-muted-foreground">{t.about.p3}</p>
-              <p className="leading-relaxed text-muted-foreground">{t.about.p4}</p>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <p className="flex gap-3 font-semibold"><Users aria-hidden="true" className="size-5 shrink-0 text-primary" /> {t.about.pill1}</p>
-                <p className="flex gap-3 font-semibold"><BookOpen aria-hidden="true" className="size-5 shrink-0 text-primary" /> {t.about.pill2}</p>
-              </div>
+              <details className="group">
+                <summary className="flex cursor-pointer list-none items-center gap-1.5 text-sm font-bold text-primary marker:content-none">
+                  <span className="group-open:hidden">{t.about.readMore}</span>
+                  <span className="hidden group-open:inline">{t.about.readLess}</span>
+                  <ChevronDown aria-hidden="true" className="size-4 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="mt-6 flex flex-col gap-6">
+                  <p className="leading-relaxed text-muted-foreground">{t.about.p3}</p>
+                  <p className="leading-relaxed text-muted-foreground">{t.about.p4}</p>
+                </div>
+              </details>
               <ArrowLink href={`mailto:${email}?subject=Potential%20collaboration`}>{t.about.cta}</ArrowLink>
             </div>
           </div>
@@ -397,8 +400,17 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
               <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.speaking.eyebrow}</p>
               <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.speaking.heading}</h2>
               <p className="leading-relaxed text-muted-foreground">{t.speaking.p1}</p>
-              <p className="leading-relaxed text-muted-foreground">{t.speaking.p2}</p>
-              <p className="leading-relaxed text-muted-foreground">{t.speaking.p3}</p>
+              <details className="group">
+                <summary className="flex cursor-pointer list-none items-center gap-1.5 text-sm font-bold text-primary marker:content-none">
+                  <span className="group-open:hidden">{t.speaking.readMore}</span>
+                  <span className="hidden group-open:inline">{t.speaking.readLess}</span>
+                  <ChevronDown aria-hidden="true" className="size-4 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="mt-6 flex flex-col gap-6">
+                  <p className="leading-relaxed text-muted-foreground">{t.speaking.p2}</p>
+                  <p className="leading-relaxed text-muted-foreground">{t.speaking.p3}</p>
+                </div>
+              </details>
               <div className="w-full rounded-2xl border border-border bg-background p-6">
                 <p className="font-serif text-lg font-semibold">{t.speaking.formatsHeading}</p>
                 <ul className="mt-4 flex flex-col gap-3">

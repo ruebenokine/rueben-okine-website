@@ -84,8 +84,8 @@ export const content = {
       p2: "Throughout my career, I have been driven by a deep interest in how migration shapes people's lives, communities, and societies. My work brings together research, policy, and practice, with a particular focus on migration, diaspora engagement, citizenship, belonging, and social inclusion. Along the way, I have had the privilege of collaborating with universities, research institutes, government agencies, international organisations, diaspora associations, schools, and civil society organisations across Africa and Europe.",
       p3: 'What I value most is creating connections — between ideas and action, institutions and communities, and policy debates and lived experiences. Whether I am conducting research, developing programmes, supporting students, or facilitating intercultural dialogue, I seek to make complex issues more accessible and bring diverse perspectives into meaningful conversation. At the heart of my work is a commitment to helping people, organisations, and communities navigate change, build understanding, and create positive social impact.',
       p4: 'Alongside this work, I bring hands-on classroom experience as a Class Educator at an international school in Berlin — a role that keeps me directly connected to the everyday realities of students, teachers, and families, and that shapes my approach to basic education and youth development.',
-      pill1: 'Stakeholder trust and coalition-building',
-      pill2: 'Evidence translated into action',
+      readMore: 'Read more',
+      readLess: 'Show less',
       cta: 'Explore a collaboration',
     },
     research: {
@@ -142,6 +142,8 @@ export const content = {
       p1: 'I regularly speak at conferences, seminars, workshops, and public events on migration, diaspora engagement, integration, and the links between research, policy, and practice. My work has taken me into conversations with government institutions, international organisations, universities, research networks, civil society organisations, and community groups across Africa and Europe.',
       p2: 'Whether I am addressing policymakers, researchers, practitioners, students, or the wider public, my goal is the same: to make complex migration issues accessible, relevant, and grounded in lived realities. I draw on more than 15 years of experience in research, policy, education, and community engagement to connect evidence with practical insights and encourage meaningful dialogue.',
       p3: 'I also provide expert commentary and interviews for media outlets seeking informed perspectives on migration, diaspora engagement, social inclusion, and related policy issues. Every engagement is tailored to the needs of the audience, whether that involves a technical briefing, a conference keynote, a university lecture, or a public discussion.',
+      readMore: 'Read more',
+      readLess: 'Show less',
       formatsHeading: 'Engagement Formats',
       formats: [
         'Keynote addresses and panel discussions at conferences and seminars',
@@ -329,8 +331,8 @@ export const content = {
       p2: 'Während meiner gesamten Laufbahn hat mich ein tiefes Interesse daran angetrieben, wie Migration das Leben von Menschen, Gemeinschaften und Gesellschaften prägt. Meine Arbeit verbindet Forschung, Politik und Praxis mit besonderem Fokus auf Migration, Diaspora-Engagement, Staatsbürgerschaft, Zugehörigkeit und soziale Inklusion. Dabei hatte ich das Privileg, mit Universitäten, Forschungsinstituten, Regierungsbehörden, internationalen Organisationen, Diaspora-Verbänden, Schulen und zivilgesellschaftlichen Organisationen in Afrika und Europa zusammenzuarbeiten.',
       p3: 'Am meisten schätze ich es, Verbindungen zu schaffen — zwischen Ideen und Handeln, zwischen Institutionen und Gemeinschaften sowie zwischen politischen Debatten und gelebter Erfahrung. Ob ich forsche, Programme entwickle, Studierende begleite oder interkulturellen Dialog moderiere: Ich möchte komplexe Themen zugänglicher machen und unterschiedliche Perspektiven in einen sinnvollen Austausch bringen. Im Kern meiner Arbeit steht das Anliegen, Menschen, Organisationen und Gemeinschaften dabei zu unterstützen, Wandel zu gestalten, Verständnis aufzubauen und positive gesellschaftliche Wirkung zu erzielen.',
       p4: 'Neben dieser Arbeit bringe ich praktische Unterrichtserfahrung als Klassenbetreuer an einer internationalen Schule in Berlin mit — eine Tätigkeit, die mich unmittelbar mit dem Alltag von Schülerinnen, Schülern, Lehrkräften und Familien verbunden hält und meinen Ansatz in der Grundbildung und Jugendentwicklung prägt.',
-      pill1: 'Vertrauensaufbau und Koalitionsbildung mit Stakeholdern',
-      pill2: 'Evidenz, übersetzt in konkretes Handeln',
+      readMore: 'Mehr lesen',
+      readLess: 'Weniger anzeigen',
       cta: 'Zusammenarbeit besprechen',
     },
     research: {
@@ -387,6 +389,8 @@ export const content = {
       p1: 'Ich spreche regelmäßig auf Konferenzen, Seminaren, Workshops und öffentlichen Veranstaltungen zu Migration, Diaspora-Engagement, Integration sowie den Verbindungen zwischen Forschung, Politik und Praxis. Meine Arbeit hat mich in den Austausch mit Regierungsbehörden, internationalen Organisationen, Universitäten, Forschungsnetzwerken, zivilgesellschaftlichen Organisationen und Gemeinschaftsgruppen in Afrika und Europa gebracht.',
       p2: 'Ob ich vor politischen Entscheidungsträgern, Forschenden, Fachleuten, Studierenden oder der breiten Öffentlichkeit spreche — mein Ziel bleibt dasselbe: komplexe Migrationsthemen zugänglich, relevant und nah an der gelebten Realität zu vermitteln. Dabei greife ich auf mehr als 15 Jahre Erfahrung in Forschung, Politik, Bildung und gesellschaftlichem Engagement zurück, um Evidenz mit praktischen Erkenntnissen zu verbinden und einen sinnvollen Dialog zu fördern.',
       p3: 'Zudem stehe ich Medien für fachkundige Einschätzungen und Interviews zu Migration, Diaspora-Engagement, sozialer Inklusion und verwandten politischen Themen zur Verfügung. Jeder Auftritt wird auf das jeweilige Publikum zugeschnitten — ob technisches Briefing, Konferenz-Hauptvortrag, Universitätsvorlesung oder öffentliche Diskussion.',
+      readMore: 'Mehr lesen',
+      readLess: 'Weniger anzeigen',
       formatsHeading: 'Vortragsformate',
       formats: [
         'Hauptvorträge und Podiumsdiskussionen auf Konferenzen und Seminaren',
