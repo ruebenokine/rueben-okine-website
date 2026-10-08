@@ -31,15 +31,15 @@
   --foreground: oklch(0.23 0.055 244);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.23 0.055 244);
-  --primary: oklch(0.43 0.13 244);
+  --primary: oklch(0.40 0.07 224);
   --primary-foreground: oklch(0.99 0.005 235);
   --secondary: oklch(0.965 0.025 232);
   --secondary-foreground: oklch(0.23 0.055 244);
   --muted: oklch(0.965 0.025 232);
-  --muted-foreground: oklch(0.42 0.045 244);
+  --muted-foreground: oklch(0.41 0.035 256);
   --border: oklch(0.86 0.04 235);
   --input: oklch(0.72 0.055 238);
-  --ring: oklch(0.43 0.13 244);
+  --ring: oklch(0.40 0.07 224);
   --radius: 0.85rem;
 }
 

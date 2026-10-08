@@ -78,15 +78,15 @@ export default function ImpressumPage() {
         </div>
       </main>
 
-      <footer className="border-t border-border bg-background py-10">
+      <footer className="bg-primary py-10 text-primary-foreground">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 lg:px-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div><p className="font-serif text-2xl font-semibold text-primary">Dr. Rueben Okine</p><p className="mt-2 text-sm text-muted-foreground">{t.footer.tagline}</p></div>
-            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><a className="text-primary underline-offset-4 hover:underline" href={`mailto:${email}`}>{t.footer.emailLabel}</a><span className="text-muted-foreground">{t.footer.location}</span></div>
+            <div><p className="font-serif text-2xl font-semibold">Dr. Rueben Okine</p><p className="mt-2 text-sm text-primary-foreground/75">{t.footer.tagline}</p></div>
+            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><a className="underline-offset-4 hover:underline" href={`mailto:${email}`}>{t.footer.emailLabel}</a><span>{t.footer.location}</span></div>
           </div>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-border pt-6 text-xs text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/60">
             <p>© {new Date().getFullYear()} Dr. Rueben Okine. {t.footer.rights}</p>
-            <a className="text-primary underline-offset-4 hover:underline" href="/impressum">{t.footer.legalLink}</a>
+            <a className="underline-offset-4 hover:underline" href="/impressum">{t.footer.legalLink}</a>
           </div>
         </div>
       </footer>
