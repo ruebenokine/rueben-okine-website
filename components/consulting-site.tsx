@@ -226,7 +226,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
             <div className="mt-12 flex flex-col gap-14">
               {serviceGroups.map((group) => (
                 <div key={group.key}>
-                  <p className="mb-5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">{t.serviceGroupLabels[group.key]}</p>
+                  <p className="mb-5 font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.serviceGroupLabels[group.key]}</p>
                   <div className="grid gap-5 sm:grid-cols-2">
                     {group.ids.map((id) => {
                       const service = t.services[id]
@@ -247,9 +247,9 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
           </div>
         </section>
 
-        <section id="about" className="scroll-mt-24 bg-primary py-20 text-primary-foreground md:py-28">
+        <section id="about" className="scroll-mt-24 border-t border-border bg-background py-20 md:py-28">
           <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 lg:gap-20 lg:px-8">
-            <div className="overflow-hidden rounded-[2rem] border-8 border-primary-foreground/15">
+            <div className="overflow-hidden rounded-[2rem] border-8 border-border">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8586-Li4Uz9nvqLctT1n4YZ449ofcFKZAza.jpeg"
                 alt="Dr. Rueben Okine seated outdoors in Berlin"
@@ -260,17 +260,17 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
               />
             </div>
             <div className="flex flex-col items-start gap-6">
-              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary-foreground/75">{t.about.eyebrow}</p>
+              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.about.eyebrow}</p>
               <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.about.heading}</h2>
-              <p className="leading-relaxed text-primary-foreground/80">{t.about.p1}</p>
-              <p className="leading-relaxed text-primary-foreground/80">{t.about.p2}</p>
-              <p className="leading-relaxed text-primary-foreground/80">{t.about.p3}</p>
-              <p className="leading-relaxed text-primary-foreground/80">{t.about.p4}</p>
+              <p className="leading-relaxed text-muted-foreground">{t.about.p1}</p>
+              <p className="leading-relaxed text-muted-foreground">{t.about.p2}</p>
+              <p className="leading-relaxed text-muted-foreground">{t.about.p3}</p>
+              <p className="leading-relaxed text-muted-foreground">{t.about.p4}</p>
               <div className="grid gap-4 sm:grid-cols-2">
-                <p className="flex gap-3 font-semibold"><Users aria-hidden="true" className="size-5 shrink-0" /> {t.about.pill1}</p>
-                <p className="flex gap-3 font-semibold"><BookOpen aria-hidden="true" className="size-5 shrink-0" /> {t.about.pill2}</p>
+                <p className="flex gap-3 font-semibold"><Users aria-hidden="true" className="size-5 shrink-0 text-primary" /> {t.about.pill1}</p>
+                <p className="flex gap-3 font-semibold"><BookOpen aria-hidden="true" className="size-5 shrink-0 text-primary" /> {t.about.pill2}</p>
               </div>
-              <ArrowLink light href={`mailto:${email}?subject=Potential%20collaboration`}>{t.about.cta}</ArrowLink>
+              <ArrowLink href={`mailto:${email}?subject=Potential%20collaboration`}>{t.about.cta}</ArrowLink>
             </div>
           </div>
         </section>
@@ -325,9 +325,9 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
           </div>
         </section>
 
-        <section className="bg-primary py-20 text-primary-foreground md:py-28" aria-labelledby="workplace-heading">
+        <section className="bg-background py-20 md:py-28" aria-labelledby="workplace-heading">
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-[.85fr_1.15fr] lg:gap-20 lg:px-8">
-            <div className="overflow-hidden rounded-[2rem] border-8 border-primary-foreground/15">
+            <div className="overflow-hidden rounded-[2rem] border-8 border-border">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8579-HfnNuhN9vgYreVOOOe8enSVbM3unDu.jpeg"
                 alt="Dr. Rueben Okine wearing a patterned shirt in an arts and community setting"
@@ -338,15 +338,15 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
               />
             </div>
             <div className="flex flex-col items-start gap-6">
-              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary-foreground/75">{t.workplace.eyebrow}</p>
+              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.workplace.eyebrow}</p>
               <h2 id="workplace-heading" className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.workplace.heading}</h2>
-              <p className="text-lg leading-relaxed text-primary-foreground/85">{t.workplace.paragraph}</p>
+              <p className="text-lg leading-relaxed text-muted-foreground">{t.workplace.paragraph}</p>
               <ul className="grid gap-3 text-base font-semibold sm:grid-cols-2">
                 {t.workplace.items.map((item) => (
-                  <li key={item} className="flex gap-3"><Check aria-hidden="true" className="mt-1 size-4 shrink-0" /> {item}</li>
+                  <li key={item} className="flex gap-3"><Check aria-hidden="true" className="mt-1 size-4 shrink-0 text-primary" /> {item}</li>
                 ))}
               </ul>
-              <ArrowLink light href={`mailto:${email}?subject=Workplace%20integration%20advisory`}>{t.workplace.cta}</ArrowLink>
+              <ArrowLink href={`mailto:${email}?subject=Workplace%20integration%20advisory`}>{t.workplace.cta}</ArrowLink>
             </div>
           </div>
         </section>
@@ -461,15 +461,15 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
         </section>
       </main>
 
-      <footer className="bg-primary py-10 text-primary-foreground">
+      <footer className="border-t border-border bg-background py-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 lg:px-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div><p className="font-serif text-2xl font-semibold">Dr. Rueben Okine</p><p className="mt-2 text-sm text-primary-foreground/75">{t.footer.tagline}</p></div>
-            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><a className="underline-offset-4 hover:underline" href={`mailto:${email}`}>{t.footer.emailLabel}</a><span>{t.footer.location}</span></div>
+            <div><p className="font-serif text-2xl font-semibold text-primary">Dr. Rueben Okine</p><p className="mt-2 text-sm text-muted-foreground">{t.footer.tagline}</p></div>
+            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><a className="text-primary underline-offset-4 hover:underline" href={`mailto:${email}`}>{t.footer.emailLabel}</a><span className="text-muted-foreground">{t.footer.location}</span></div>
           </div>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/60">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-border pt-6 text-xs text-muted-foreground">
             <p>© {new Date().getFullYear()} Dr. Rueben Okine. {t.footer.rights}</p>
-            <a className="underline-offset-4 hover:underline" href={lang === 'de' ? '/de/impressum' : '/impressum'}>{t.footer.legalLink}</a>
+            <a className="text-primary underline-offset-4 hover:underline" href={lang === 'de' ? '/de/impressum' : '/impressum'}>{t.footer.legalLink}</a>
           </div>
         </div>
       </footer>
