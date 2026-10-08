@@ -281,12 +281,21 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
               <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.experience.eyebrow}</p>
               <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.experience.heading}</h2>
               <p className="text-lg leading-relaxed text-foreground">{t.experience.p1}</p>
-              <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p2}</p>
-              <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p3}</p>
-              <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p4}</p>
-              <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p5}</p>
-              <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p6}</p>
-              <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p7}</p>
+              <details className="group">
+                <summary className="flex cursor-pointer list-none items-center gap-1.5 text-sm font-bold text-primary marker:content-none">
+                  <span className="group-open:hidden">{t.experience.readMore}</span>
+                  <span className="hidden group-open:inline">{t.experience.readLess}</span>
+                  <ChevronDown aria-hidden="true" className="size-4 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="mt-6 flex flex-col gap-6">
+                  <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p2}</p>
+                  <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p3}</p>
+                  <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p4}</p>
+                  <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p5}</p>
+                  <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p6}</p>
+                  <p className="text-lg leading-relaxed text-muted-foreground">{t.experience.p7}</p>
+                </div>
+              </details>
             </div>
 
             <div id="research" className="mt-16 scroll-mt-24 border-t border-border pt-14 md:mt-20 md:pt-16">
@@ -317,9 +326,18 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.education.eyebrow}</p>
                 <h3 className="font-serif text-3xl font-semibold tracking-tight text-balance md:text-4xl">{t.education.heading}</h3>
                 <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p1}</p>
-                <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p2}</p>
-                <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p3}</p>
-                <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p4}</p>
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center gap-1.5 text-sm font-bold text-primary marker:content-none">
+                    <span className="group-open:hidden">{t.education.readMore}</span>
+                    <span className="hidden group-open:inline">{t.education.readLess}</span>
+                    <ChevronDown aria-hidden="true" className="size-4 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="mt-6 flex flex-col gap-6">
+                    <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p2}</p>
+                    <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p3}</p>
+                    <p className="text-lg leading-relaxed text-muted-foreground">{t.education.p4}</p>
+                  </div>
+                </details>
               </div>
             </div>
           </div>
@@ -385,7 +403,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 <p className="font-serif text-lg font-semibold">{t.speaking.formatsHeading}</p>
                 <ul className="mt-4 flex flex-col gap-3">
                   {t.speaking.formats.map((item) => (
-                    <li key={item} className="flex gap-3 text-sm font-medium"><Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent" />{item}</li>
+                    <li key={item} className="flex gap-3 text-sm font-medium"><Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-primary" />{item}</li>
                   ))}
                 </ul>
               </div>
@@ -396,7 +414,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
 
         <section className="bg-background py-20 md:py-28">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <article className="mx-auto max-w-3xl rounded-2xl bg-secondary p-7 md:p-9">
+            <article className="mx-auto max-w-5xl rounded-2xl bg-secondary p-7 md:p-9">
               <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.workingStyle.eyebrow}</p>
               <h2 className="mt-4 font-serif text-3xl font-semibold">{t.workingStyle.heading}</h2>
               <p className="mt-5 leading-relaxed text-muted-foreground">{t.workingStyle.paragraph}</p>
@@ -416,7 +434,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
             <ol className="mt-10 grid gap-5 md:grid-cols-3">
               {t.engagement.steps.map((step, index) => (
                 <li key={step.title} className="flex gap-4 rounded-2xl bg-background p-6">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-accent font-mono font-bold text-accent-foreground">{index + 1}</span>
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary font-mono font-bold text-primary-foreground">{index + 1}</span>
                   <div><h3 className="font-serif text-xl font-semibold">{step.title}</h3><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.text}</p></div>
                 </li>
               ))}
@@ -436,7 +454,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 <details key={question} className="group border-b border-border py-6">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-serif text-xl font-semibold marker:content-none">
                     {question}
-                    <span aria-hidden="true" className="text-accent transition-transform group-open:rotate-45">+</span>
+                    <span aria-hidden="true" className="text-primary transition-transform group-open:rotate-45">+</span>
                   </summary>
                   <p className="max-w-3xl pt-4 leading-relaxed text-muted-foreground">{answer}</p>
                 </details>

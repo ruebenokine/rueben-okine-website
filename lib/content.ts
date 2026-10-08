@@ -67,7 +67,7 @@ export const content = {
       'family-student-support': {
         title: 'Family and Student Support',
         description:
-          'People-centred guidance that helps students with a migration background navigate social settings, challenges, and belonging — with support extended to their families where it matters most.',
+          'People-centred guidance that helps students with a migration background — including from Africa, Asia, and other Global South regions — and their families navigate complex school systems, administrative hurdles, social settings and challenges, and belonging.',
         deliverables: ['Support navigating social spheres and challenges', 'Education and career orientation', 'Family engagement, where helpful'],
       },
       'intercultural-development': {
@@ -106,6 +106,8 @@ export const content = {
       p2: "In my current role as a Class Educator, I support students' daily learning, provide social and emotional guidance, and lead extracurricular initiatives — including the Badminton Club, Afro Club, and Diplomats Club. These are vital spaces where students build confidence, teamwork, and cultural awareness outside the regular timetable.",
       p3: "Previously, as Deputy Head of After-School Programmes (Ganztag), I helped coordinate the school's afternoon offerings: scheduling and supervising activities, supporting staff, liaising with parents and school leadership, and ensuring a safe, reliable environment for students and families who depended on it.",
       p4: 'This hands-on practice — spanning academic support, administrative coordination, and student wellbeing — has sharpened my understanding of institutional dynamics and intercultural education. It provides the exact, real-world foundation I bring to my advisory work in basic education, youth development, and family support.',
+      readMore: 'Read more',
+      readLess: 'Show less',
     },
     experience: {
       eyebrow: 'Background & Experience',
@@ -117,6 +119,8 @@ export const content = {
       p5: 'Alongside my academic background, I bring over a decade of professional experience across migration research, policy, governance, and education. My public-sector work in Ghana provided a strong grounding in policy development, programme implementation, regulatory analysis, financial oversight, and collaboration with international partners, including the International Organization for Migration (IOM) and the Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ).',
       p6: 'In Europe, my research with the Technical University of Berlin and the Leibniz Institute deepened my expertise in integration and transnational life. Additionally, during my time with the African Diaspora Policy Centre in The Hague, I explored the contributions of African diaspora organisations in the Netherlands to peacebuilding initiatives in Kenya, Rwanda, Djibouti, and the Democratic Republic of Congo. Across these roles, I have conducted extensive fieldwork and interviews with diaspora organisations and key stakeholders across the field.',
       p7: 'Beyond research and policy, I have led inclusive educational and community programmes, coordinated multidisciplinary teams, supported student welfare, and collaborated closely with parents and institutional stakeholders to create environments where diverse individuals can thrive. This combination of academic depth, policy expertise, programme leadership, and intercultural understanding enables me to support institutions in designing practical, people-centred solutions that create a meaningful impact.',
+      readMore: 'Read more',
+      readLess: 'Show less',
     },
     workplace: {
       eyebrow: 'Workplace integration & social cohesion',
@@ -308,7 +312,7 @@ export const content = {
       'family-student-support': {
         title: 'Familien- und Studierendenbegleitung',
         description:
-          'Menschenzentrierte Begleitung, die Studierenden mit Migrationshintergrund hilft, soziale Umfelder, Herausforderungen und Zugehörigkeit zu meistern — mit Unterstützung für ihre Familien, wo es am meisten zählt.',
+          'Menschenzentrierte Begleitung, die Schülerinnen und Schülern mit Migrationshintergrund — auch aus Afrika, Asien und anderen Ländern des Globalen Südens — sowie ihren Familien hilft, komplexe Schulsysteme, administrative Hürden, soziale Umfelder und Herausforderungen sowie Zugehörigkeit zu meistern.',
         deliverables: ['Begleitung bei sozialen Herausforderungen und im sozialen Umfeld', 'Bildungs- und Berufsorientierung', 'Einbindung der Familie, wo hilfreich'],
       },
       'intercultural-development': {
@@ -347,6 +351,8 @@ export const content = {
       p2: 'In meiner aktuellen Rolle als Klassenbetreuer unterstütze ich das tägliche Lernen der Schülerinnen und Schüler, biete soziale und emotionale Begleitung und leite außerschulische Angebote — darunter den Badminton Club, den Afro Club und den Diplomats Club. Dies sind wichtige Räume, in denen Schülerinnen und Schüler außerhalb des regulären Stundenplans Selbstvertrauen, Teamgeist und kulturelles Bewusstsein entwickeln.',
       p3: 'Zuvor habe ich als stellvertretender Leiter des Ganztagsprogramms (Ganztag) die Nachmittagsangebote der Schule mitgestaltet: Planung und Beaufsichtigung der Aktivitäten, Unterstützung des Personals, Austausch mit Eltern und Schulleitung sowie die Sicherstellung eines sicheren und verlässlichen Umfelds für die Schülerinnen, Schüler und Familien, die darauf angewiesen waren.',
       p4: 'Diese praktische Erfahrung — die akademische Unterstützung, administrative Koordination und das Wohlergehen der Schülerinnen und Schüler umfasst — hat mein Verständnis institutioneller Abläufe und interkultureller Bildung geschärft. Sie bildet die konkrete, praxisnahe Grundlage, die ich in meine Beratungstätigkeit in den Bereichen Grundbildung, Jugendentwicklung und Familienbegleitung einbringe.',
+      readMore: 'Mehr lesen',
+      readLess: 'Weniger anzeigen',
     },
     experience: {
       eyebrow: 'Werdegang & Erfahrung',
@@ -358,6 +364,8 @@ export const content = {
       p5: 'Neben meinem akademischen Hintergrund bringe ich mehr als ein Jahrzehnt Berufserfahrung in Migrationsforschung, Politik, Governance und Bildung mit. Meine Tätigkeit im öffentlichen Dienst in Ghana bildete eine fundierte Grundlage in Politikentwicklung, Programmumsetzung, Regulierungsanalyse, Finanzaufsicht und Zusammenarbeit mit internationalen Partnern, darunter die Internationale Organisation für Migration (IOM) und die Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ).',
       p6: 'In Europa vertiefte meine Forschung an der Technischen Universität Berlin und am Leibniz-Institut meine Expertise in Integration und transnationalem Leben. Während meiner Zeit am African Diaspora Policy Centre in Den Haag untersuchte ich zudem die Beiträge afrikanischer Diaspora-Organisationen in den Niederlanden zu Friedensinitiativen in Kenia, Ruanda, Dschibuti und der Demokratischen Republik Kongo. In diesen Positionen habe ich umfangreiche Feldforschung betrieben und zahlreiche Interviews mit Diaspora-Organisationen und wichtigen Akteuren des Feldes geführt.',
       p7: 'Über Forschung und Politik hinaus habe ich inklusive Bildungs- und Gemeinschaftsprogramme geleitet, multidisziplinäre Teams koordiniert, das Wohlergehen von Schülerinnen und Schülern unterstützt und eng mit Eltern sowie institutionellen Stakeholdern zusammengearbeitet, um Umgebungen zu schaffen, in denen unterschiedliche Menschen sich entfalten können. Diese Kombination aus akademischer Tiefe, politischer Fachkenntnis, Programmleitung und interkulturellem Verständnis befähigt mich, Institutionen bei der Entwicklung praktischer, menschenzentrierter Lösungen mit spürbarer Wirkung zu unterstützen.',
+      readMore: 'Mehr lesen',
+      readLess: 'Weniger anzeigen',
     },
     workplace: {
       eyebrow: 'Integration am Arbeitsplatz & sozialer Zusammenhalt',
