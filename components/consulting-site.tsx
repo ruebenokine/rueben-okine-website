@@ -467,7 +467,10 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
             <div><p className="font-serif text-2xl font-semibold">Dr. Rueben Okine</p><p className="mt-2 text-sm text-primary-foreground/75">{t.footer.tagline}</p></div>
             <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><a className="underline-offset-4 hover:underline" href={`mailto:${email}`}>{t.footer.emailLabel}</a><span>{t.footer.location}</span></div>
           </div>
-          <p className="border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/60">© {new Date().getFullYear()} Dr. Rueben Okine. {t.footer.rights}</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/60">
+            <p>© {new Date().getFullYear()} Dr. Rueben Okine. {t.footer.rights}</p>
+            <a className="underline-offset-4 hover:underline" href={lang === 'de' ? '/de/impressum' : '/impressum'}>{t.footer.legalLink}</a>
+          </div>
         </div>
       </footer>
     </>
