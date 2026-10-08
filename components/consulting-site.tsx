@@ -7,36 +7,15 @@ import {
   BookOpen,
   Check,
   ChevronDown,
-  GraduationCap,
   Mail,
   Menu,
   MapPin,
-  Network,
-  Search,
   Users,
 } from 'lucide-react'
 import { ContactForm } from '@/components/contact-form'
 import { content, type Lang } from '@/lib/content'
 
 const email = 'rueben.e.k.okine@gmail.com'
-
-const serviceOrder = [
-  'migration-diaspora-advisory',
-  'research-evaluation',
-  'higher-education-academia',
-  'basic-education',
-  'family-student-support',
-  'intercultural-development',
-] as const
-
-const serviceIcons: Record<(typeof serviceOrder)[number], typeof Network> = {
-  'migration-diaspora-advisory': Network,
-  'research-evaluation': Search,
-  'higher-education-academia': GraduationCap,
-  'basic-education': BookOpen,
-  'family-student-support': Users,
-  'intercultural-development': Users,
-}
 
 const serviceGroups = [
   { key: 'advisory', ids: ['migration-diaspora-advisory', 'intercultural-development'] },
@@ -251,11 +230,9 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                   <div className="grid gap-5 sm:grid-cols-2">
                     {group.ids.map((id) => {
                       const service = t.services[id]
-                      const Icon = serviceIcons[id]
                       return (
                         <article key={id} id={id} className="scroll-mt-24 flex flex-col rounded-2xl border border-border bg-card p-7 transition-transform hover:-translate-y-1 md:p-8">
-                          <Icon aria-hidden="true" className="size-8 text-primary" />
-                          <h3 className="mt-7 font-serif text-2xl font-semibold">{service.title}</h3>
+                          <h3 className="font-serif text-2xl font-semibold">{service.title}</h3>
                           <p className="mt-4 min-h-28 leading-relaxed text-muted-foreground">{service.description}</p>
                           <ul className="mt-6 flex flex-col gap-3 border-t border-border pt-6">
                             {service.deliverables.map((item) => <li key={item} className="flex gap-3 text-sm font-medium"><Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-primary" />{item}</li>)}
@@ -485,9 +462,12 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
       </main>
 
       <footer className="bg-primary py-10 text-primary-foreground">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 md:flex-row md:items-end md:justify-between lg:px-8">
-          <div><p className="font-serif text-2xl font-semibold">Dr. Rueben Okine</p><p className="mt-2 text-sm text-primary-foreground/75">{t.footer.tagline}</p></div>
-          <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><a className="underline-offset-4 hover:underline" href={`mailto:${email}`}>{t.footer.emailLabel}</a><span>{t.footer.location}</span></div>
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 lg:px-8">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div><p className="font-serif text-2xl font-semibold">Dr. Rueben Okine</p><p className="mt-2 text-sm text-primary-foreground/75">{t.footer.tagline}</p></div>
+            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><a className="underline-offset-4 hover:underline" href={`mailto:${email}`}>{t.footer.emailLabel}</a><span>{t.footer.location}</span></div>
+          </div>
+          <p className="border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/60">© {new Date().getFullYear()} Dr. Rueben Okine. {t.footer.rights}</p>
         </div>
       </footer>
     </>
