@@ -223,7 +223,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
             </div>
             <div className="mt-12 flex flex-col gap-14">
               {serviceGroups.map((group) => (
-                <div key={group.key}>
+                <div key={group.key} id={`services-${group.key}`} className="scroll-mt-24">
                   <p className="mb-5 font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.serviceGroupLabels[group.key]}</p>
                   <div className="grid gap-5 sm:grid-cols-2">
                     {group.ids.map((id) => {
@@ -494,7 +494,16 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
       <footer className="bg-primary py-10 text-primary-foreground">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 lg:px-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div><p className="font-serif text-2xl font-semibold">Dr. Rueben Okine</p><p className="mt-2 text-sm text-primary-foreground/75">{t.footer.tagline}</p></div>
+            <div>
+              <p className="font-serif text-2xl font-semibold">Dr. Rueben Okine</p>
+              <p className="mt-2 text-sm text-primary-foreground/75">
+                <a className="underline-offset-4 hover:underline" href="#services-advisory">{t.footer.taglineMigration}</a>
+                {' · '}
+                <a className="underline-offset-4 hover:underline" href="#services-research">{t.footer.taglineResearch}</a>
+                {' · '}
+                <a className="underline-offset-4 hover:underline" href="#services-education">{t.footer.taglineEducation}</a>
+              </p>
+            </div>
             <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><a className="underline-offset-4 hover:underline" href={`mailto:${email}`}>{t.footer.emailLabel}</a><span>{t.footer.location}</span></div>
           </div>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/60">

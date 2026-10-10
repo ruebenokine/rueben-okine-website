@@ -239,7 +239,9 @@ export const content = {
       },
     },
     footer: {
-      tagline: 'Migration policy · Research · Education',
+      taglineMigration: 'Migration policy',
+      taglineResearch: 'Research',
+      taglineEducation: 'Education',
       emailLabel: 'Email',
       location: 'Berlin, Germany',
       rights: 'All rights reserved.',
@@ -486,7 +488,9 @@ export const content = {
       },
     },
     footer: {
-      tagline: 'Migrationspolitik · Forschung · Bildung',
+      taglineMigration: 'Migrationspolitik',
+      taglineResearch: 'Forschung',
+      taglineEducation: 'Bildung',
       emailLabel: 'E-Mail',
       location: 'Berlin, Deutschland',
       rights: 'Alle Rechte vorbehalten.',
