@@ -247,7 +247,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
 
         <section id="about" className="scroll-mt-24 border-t border-border bg-background py-20 md:py-28">
           <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 lg:gap-20 lg:px-8">
-            <div className="overflow-hidden rounded-[2rem] border-8 border-border">
+            <div className="order-2 overflow-hidden rounded-[2rem] border-8 border-border md:order-1">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8586-Li4Uz9nvqLctT1n4YZ449ofcFKZAza.jpeg"
                 alt="Dr. Rueben Okine seated outdoors in Berlin"
@@ -257,7 +257,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 className="aspect-[4/3] w-full object-cover"
               />
             </div>
-            <div className="flex flex-col items-start gap-6">
+            <div className="order-1 flex flex-col items-start gap-6 md:order-2">
               <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.about.eyebrow}</p>
               <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.about.heading}</h2>
               <p className="leading-relaxed text-muted-foreground">{t.about.p1}</p>
@@ -348,7 +348,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
 
         <section className="bg-background py-20 md:py-28" aria-labelledby="workplace-heading">
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-[.85fr_1.15fr] lg:gap-20 lg:px-8">
-            <div className="overflow-hidden rounded-[2rem] border-8 border-border">
+            <div className="order-2 overflow-hidden rounded-[2rem] border-8 border-border md:order-1">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8579-HfnNuhN9vgYreVOOOe8enSVbM3unDu.jpeg"
                 alt="Dr. Rueben Okine wearing a patterned shirt in an arts and community setting"
@@ -358,7 +358,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 className="aspect-[4/5] w-full object-cover object-top"
               />
             </div>
-            <div className="flex flex-col items-start gap-6">
+            <div className="order-1 flex flex-col items-start gap-6 md:order-2">
               <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.workplace.eyebrow}</p>
               <h2 id="workplace-heading" className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.workplace.heading}</h2>
               <p className="text-lg leading-relaxed text-muted-foreground">{t.workplace.paragraph}</p>
@@ -374,7 +374,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
 
         <section id="speaking" className="scroll-mt-24 bg-secondary py-20 md:py-28">
           <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 lg:gap-20 lg:px-8">
-            <div className="flex flex-col gap-4">
+            <div className="order-2 flex flex-col gap-4 md:order-1">
               <div className="overflow-hidden rounded-[2rem] border-8 border-background shadow-xl">
                 <Image
                   src="/images/speaking-microphone.jpg"
@@ -396,7 +396,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 />
               </div>
             </div>
-            <div className="flex flex-col items-start gap-6">
+            <div className="order-1 flex flex-col items-start gap-6 md:order-2">
               <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.speaking.eyebrow}</p>
               <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.speaking.heading}</h2>
               <p className="leading-relaxed text-muted-foreground">{t.speaking.p1}</p>
