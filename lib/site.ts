@@ -14,7 +14,7 @@ export const siteConfig = {
     'Research and evaluation',
     'Higher education and academic services',
     'Basic education and social development',
-    'Family and student support',
+    'Student and family integration support',
     'Intercultural development',
     'Workplace integration and social cohesion',
   ],

@@ -38,15 +38,35 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#eaf6ff',
+  themeColor: '#d8faf7',
   width: 'device-width',
   initialScale: 1,
+}
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: siteConfig.name,
+  jobTitle: 'Migration and Diaspora Policy Advisor',
+  description: siteConfig.description,
+  url: siteUrl.toString(),
+  image: siteConfig.image,
+  email: `mailto:${siteConfig.email}`,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Berlin',
+    addressCountry: 'DE',
+  },
+  knowsAbout: siteConfig.services,
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-GB" className={`bg-background ${manrope.variable} ${lora.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
+        {children}
+      </body>
     </html>
   )
 }

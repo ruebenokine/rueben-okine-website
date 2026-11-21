@@ -187,7 +187,7 @@ export const content = {
         {
           question: 'What advisory and expert services do you provide?',
           answer:
-            'I provide migration and diaspora advisory, policy analysis, research and evaluation, higher and basic education support, family and student guidance, intercultural development, and workplace integration services.',
+            'I provide migration and diaspora advisory, policy analysis, research and evaluation, higher and basic education support, student and family integration support, intercultural development, and workplace integration services.',
         },
         {
           question: 'Who do you work with?',
@@ -445,7 +445,7 @@ export const content = {
         {
           question: 'Welche Beratungs- und Fachleistungen bieten Sie an?',
           answer:
-            'Ich biete Migrations- und Diaspora-Beratung, Politikanalyse, Forschung und Evaluation, Unterstützung im Hochschul- und Grundbildungsbereich, Familien- und Studierendenbegleitung, interkulturelle Entwicklung sowie Integration am Arbeitsplatz an.',
+            'Ich biete Migrations- und Diaspora-Beratung, Politikanalyse, Forschung und Evaluation, Unterstützung im Hochschul- und Grundbildungsbereich, Schüler- und Familienintegrationsbegleitung, interkulturelle Entwicklung sowie Integration am Arbeitsplatz an.',
         },
         {
           question: 'Mit wem arbeiten Sie zusammen?',

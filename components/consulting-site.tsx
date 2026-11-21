@@ -356,33 +356,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
           </div>
         </section>
 
-        <section className="bg-background py-20 md:py-28" aria-labelledby="workplace-heading">
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-[.85fr_1.15fr] lg:gap-20 lg:px-8">
-            <div className="order-2 overflow-hidden rounded-[2rem] border-8 border-border md:order-1">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8579-HfnNuhN9vgYreVOOOe8enSVbM3unDu.jpeg"
-                alt="Dr. Rueben Okine wearing a patterned shirt in an arts and community setting"
-                width={1125}
-                height={1500}
-                sizes="(max-width: 768px) 100vw, 42vw"
-                className="aspect-[4/5] w-full object-cover object-top"
-              />
-            </div>
-            <div className="order-1 flex flex-col items-start gap-6 md:order-2">
-              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.workplace.eyebrow}</p>
-              <h2 id="workplace-heading" className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.workplace.heading}</h2>
-              <p className="text-lg leading-relaxed text-muted-foreground">{t.workplace.paragraph}</p>
-              <ul className="grid gap-3 text-base font-semibold sm:grid-cols-2">
-                {t.workplace.items.map((item) => (
-                  <li key={item} className="flex gap-3"><Check aria-hidden="true" className="mt-1 size-4 shrink-0 text-primary" /> {item}</li>
-                ))}
-              </ul>
-              <ArrowLink href={`mailto:${email}?subject=Workplace%20integration%20advisory`}>{t.workplace.cta}</ArrowLink>
-            </div>
-          </div>
-        </section>
-
-        <section id="family-education-support" className="scroll-mt-24 border-t border-border bg-background py-20 md:py-28">
+        <section id="family-education-support" className="scroll-mt-24 bg-background py-20 md:py-28">
           <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 lg:gap-20 lg:px-8">
             <div className="order-2 flex flex-col gap-6 md:order-1">
               <div className="overflow-hidden rounded-[2rem] border-8 border-border">
@@ -419,6 +393,32 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 </ul>
               </div>
               <ArrowLink href={`mailto:${email}?subject=Family%20and%20education%20support%20inquiry`}>{t.educationSupport.cta}</ArrowLink>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-border bg-background py-20 md:py-28" aria-labelledby="workplace-heading">
+          <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-[.85fr_1.15fr] lg:gap-20 lg:px-8">
+            <div className="order-2 overflow-hidden rounded-[2rem] border-8 border-border md:order-1">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8579-HfnNuhN9vgYreVOOOe8enSVbM3unDu.jpeg"
+                alt="Dr. Rueben Okine wearing a patterned shirt in an arts and community setting"
+                width={1125}
+                height={1500}
+                sizes="(max-width: 768px) 100vw, 42vw"
+                className="aspect-[4/5] w-full object-cover object-top"
+              />
+            </div>
+            <div className="order-1 flex flex-col items-start gap-6 md:order-2">
+              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.workplace.eyebrow}</p>
+              <h2 id="workplace-heading" className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.workplace.heading}</h2>
+              <p className="text-lg leading-relaxed text-muted-foreground">{t.workplace.paragraph}</p>
+              <ul className="grid gap-3 text-base font-semibold sm:grid-cols-2">
+                {t.workplace.items.map((item) => (
+                  <li key={item} className="flex gap-3"><Check aria-hidden="true" className="mt-1 size-4 shrink-0 text-primary" /> {item}</li>
+                ))}
+              </ul>
+              <ArrowLink href={`mailto:${email}?subject=Workplace%20integration%20advisory`}>{t.workplace.cta}</ArrowLink>
             </div>
           </div>
         </section>
