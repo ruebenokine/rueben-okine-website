@@ -113,14 +113,14 @@ export const content = {
       eyebrow: 'Workplace integration & social cohesion',
       heading: 'Helping diverse workplaces become stronger communities.',
       paragraph:
-        'I provide advisory and expert services to companies, public and private institutions, and corporate organisations seeking to integrate employees with migration backgrounds. The work focuses on social cohesion, workplace harmony, belonging, and an inclusive company culture in which every employee can contribute.',
+        "I offer workshops for organisations that want to build multicultural competence — practical support for understanding and working well with migrants and colleagues with a migration background, particularly from Africa and the Global South. Sessions combine practical guidance with hands-on cultural engagement, including the traditional game Oware and other elements of African culture, to build understanding in a way that's memorable and genuinely shared.",
       items: [
-        'Integration strategies and institutional guidance',
-        'Intercultural leadership and team development',
-        'Employee belonging and social cohesion',
-        'Inclusive workplace and company culture',
+        'Multicultural competence workshops for teams and leadership',
+        'Practical guidance on working with colleagues with a migration background',
+        'Hands-on cultural engagement, including Oware and other African traditions',
+        'Tailored sessions for organisations and institutions',
       ],
-      cta: 'Discuss your organisation',
+      cta: 'Book a workshop for your organisation',
     },
     educationSupport: {
       navLabel: 'Education & Family Support',
@@ -371,14 +371,14 @@ export const content = {
       eyebrow: 'Integration am Arbeitsplatz & sozialer Zusammenhalt',
       heading: 'Vielfältige Arbeitsplätze zu stärkeren Gemeinschaften machen.',
       paragraph:
-        'Ich biete Beratung und fachliche Unterstützung für Unternehmen, öffentliche und private Institutionen sowie Wirtschaftsorganisationen, die Mitarbeitende mit Migrationshintergrund integrieren möchten. Die Arbeit konzentriert sich auf sozialen Zusammenhalt, ein harmonisches Arbeitsumfeld, Zugehörigkeit und eine inklusive Unternehmenskultur, in der jede und jeder Mitarbeitende einen Beitrag leisten kann.',
+        'Ich biete Workshops für Organisationen an, die interkulturelle Kompetenz aufbauen möchten — mit praktischer Unterstützung für den Umgang mit Migrantinnen und Migranten sowie Kolleginnen und Kollegen mit Migrationshintergrund, insbesondere aus Afrika und dem Globalen Süden. Die Sessions verbinden praxisnahe Impulse mit kulturellem Erleben, etwa durch das traditionelle Spiel Oware und weitere Elemente afrikanischer Kultur, um Verständnis auf eine Weise zu schaffen, die nachwirkt und gemeinsam erlebt wird.',
       items: [
-        'Integrationsstrategien und institutionelle Beratung',
-        'Interkulturelle Führung und Teamentwicklung',
-        'Zugehörigkeit und sozialer Zusammenhalt der Mitarbeitenden',
-        'Inklusiver Arbeitsplatz und Unternehmenskultur',
+        'Workshops zur interkulturellen Kompetenz für Teams und Führungskräfte',
+        'Praktische Unterstützung im Umgang mit Kolleginnen und Kollegen mit Migrationshintergrund',
+        'Kulturelles Erleben, u. a. mit Oware und weiteren afrikanischen Traditionen',
+        'Maßgeschneiderte Sessions für Organisationen und Institutionen',
       ],
-      cta: 'Ihre Organisation besprechen',
+      cta: 'Workshop für Ihr Team anfragen',
     },
     educationSupport: {
       navLabel: 'Bildung & Familienbegleitung',
