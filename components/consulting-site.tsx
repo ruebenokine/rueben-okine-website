@@ -18,7 +18,6 @@ const email = 'rueben.e.k.okine@gmail.com'
 const serviceGroups = [
   { key: 'advisory', ids: ['migration-diaspora-advisory', 'intercultural-development'] },
   { key: 'research', ids: ['research-evaluation', 'higher-education-academia'] },
-  { key: 'education', ids: ['basic-education', 'family-student-support'] },
 ] as const
 
 function ArrowLink({ href, children, light = false }: { href: string; children: React.ReactNode; light?: boolean }) {
@@ -128,7 +127,10 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                     ))}
                   </div>
                 ))}
-                <a href="#speaking" onClick={() => setServicesOpen(false)} className="block rounded-xl border-t border-border px-3 pb-1 pt-3 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
+                <a href="#family-education-support" onClick={() => setServicesOpen(false)} className="block rounded-xl border-t border-border px-3 py-2.5 pt-3 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
+                  {t.educationSupport.navLabel}
+                </a>
+                <a href="#speaking" onClick={() => setServicesOpen(false)} className="block rounded-xl px-3 py-2.5 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
                   {t.speaking.navLabel}
                 </a>
               </div>
@@ -163,6 +165,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                     ))}
                   </div>
                 ))}
+                <a href="#family-education-support" onClick={closeMobileMenu} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{t.educationSupport.navLabel}</a>
                 <a href="#speaking" onClick={closeMobileMenu} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{t.speaking.navLabel}</a>
               </div>
             </details>
@@ -184,6 +187,13 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 <h1 className="max-w-3xl font-serif text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-balance md:text-6xl lg:text-7xl">
                   {t.hero.heading}
                 </h1>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm font-bold text-primary">
+                  <a className="underline-offset-4 hover:underline" href="#services-advisory">{t.footer.taglineMigration}</a>
+                  <span aria-hidden="true" className="text-muted-foreground">·</span>
+                  <a className="underline-offset-4 hover:underline" href="#services-research">{t.footer.taglineResearch}</a>
+                  <span aria-hidden="true" className="text-muted-foreground">·</span>
+                  <a className="underline-offset-4 hover:underline" href="#family-education-support">{t.footer.taglineEducation}</a>
+                </div>
                 <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
                   {t.hero.paragraph}
                 </p>
@@ -372,6 +382,40 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
           </div>
         </section>
 
+        <section id="family-education-support" className="scroll-mt-24 border-t border-border bg-background py-20 md:py-28">
+          <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 lg:gap-20 lg:px-8">
+            <div className="order-2 overflow-hidden rounded-[2rem] border-8 border-border md:order-1">
+              <Image
+                src="/images/family-education-support.jpg"
+                alt="Dr. Rueben Okine smiling in a professional portrait"
+                width={1125}
+                height={750}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="aspect-[4/3] w-full object-cover object-top"
+              />
+            </div>
+            <div className="order-1 flex flex-col items-start gap-6 md:order-2">
+              <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.educationSupport.eyebrow}</p>
+              <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.educationSupport.heading}</h2>
+              <p className="text-lg leading-relaxed text-muted-foreground">{t.educationSupport.paragraph}</p>
+              <div className="flex w-full flex-col gap-8">
+                {t.educationSupport.subservices.map((service) => (
+                  <div key={service.title} className="border-t border-border pt-6">
+                    <h3 className="font-serif text-xl font-semibold">{service.title}</h3>
+                    <p className="mt-3 leading-relaxed text-muted-foreground">{service.description}</p>
+                    <ul className="mt-4 flex flex-col gap-2.5">
+                      {service.deliverables.map((item) => (
+                        <li key={item} className="flex gap-3 text-sm font-medium"><Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-primary" />{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              <ArrowLink href={`mailto:${email}?subject=Family%20and%20education%20support%20inquiry`}>{t.educationSupport.cta}</ArrowLink>
+            </div>
+          </div>
+        </section>
+
         <section id="speaking" className="scroll-mt-24 bg-secondary py-20 md:py-28">
           <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 lg:gap-20 lg:px-8">
             <div className="order-2 flex flex-col gap-4 md:order-1">
@@ -501,7 +545,7 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                 {' · '}
                 <a className="underline-offset-4 hover:underline" href="#services-research">{t.footer.taglineResearch}</a>
                 {' · '}
-                <a className="underline-offset-4 hover:underline" href="#services-education">{t.footer.taglineEducation}</a>
+                <a className="underline-offset-4 hover:underline" href="#family-education-support">{t.footer.taglineEducation}</a>
               </p>
             </div>
             <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><a className="underline-offset-4 hover:underline" href={`mailto:${email}`}>{t.footer.emailLabel}</a><span>{t.footer.location}</span></div>

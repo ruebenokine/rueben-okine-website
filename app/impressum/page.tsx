@@ -88,7 +88,7 @@ export default function ImpressumPage() {
                 {' · '}
                 <a className="underline-offset-4 hover:underline" href="/#services-research">{t.footer.taglineResearch}</a>
                 {' · '}
-                <a className="underline-offset-4 hover:underline" href="/#services-education">{t.footer.taglineEducation}</a>
+                <a className="underline-offset-4 hover:underline" href="/#family-education-support">{t.footer.taglineEducation}</a>
               </p>
             </div>
             <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><a className="underline-offset-4 hover:underline" href={`mailto:${email}`}>{t.footer.emailLabel}</a><span>{t.footer.location}</span></div>

@@ -37,7 +37,6 @@ export const content = {
     serviceGroupLabels: {
       advisory: 'Migration, Diaspora & Intercultural Practice',
       research: 'Research & Higher Education',
-      education: 'Basic Education & Family Support',
     },
     services: {
       'migration-diaspora-advisory': {
@@ -57,18 +56,6 @@ export const content = {
         description:
           'Specialist academic support for universities, colleges, research centres, graduate students, and international programmes.',
         deliverables: ['Lecturing and guest speaking', 'Thesis supervision and PhD coaching', 'Research projects and proposal development'],
-      },
-      'basic-education': {
-        title: 'Basic Education and Youth Development',
-        description:
-          'Inclusive support for Kitas and schools that strengthens learning, participation, social development, youth development, and intercultural understanding.',
-        deliverables: ['Programme and curriculum design', 'Social development initiatives', 'Teacher, student, and community engagement'],
-      },
-      'family-student-support': {
-        title: 'Family and Student Support',
-        description:
-          'People-centred guidance that helps students with a migration background — including from Africa, Asia, and other Global South regions — and their families navigate complex school systems, administrative hurdles, social settings and challenges, and belonging.',
-        deliverables: ['Support navigating social spheres and challenges', 'Education and career orientation', 'Family engagement, where helpful'],
       },
       'intercultural-development': {
         title: 'Intercultural Development and Cohesion',
@@ -134,6 +121,28 @@ export const content = {
         'Inclusive workplace and company culture',
       ],
       cta: 'Discuss your organisation',
+    },
+    educationSupport: {
+      navLabel: 'Education & Family Support',
+      eyebrow: 'Basic Education & Family Integration Support',
+      heading: 'Guiding students and families through unfamiliar school systems, with confidence and belonging.',
+      paragraph:
+        'I work directly with Kitas, schools, students, and families to strengthen learning, participation, and belonging — including guidance for students with a migration background, and their families, as they navigate an unfamiliar school system.',
+      subservices: [
+        {
+          title: 'Basic Education and Youth Development',
+          description:
+            'Inclusive support for Kitas and schools that strengthens learning, participation, social development, youth development, and intercultural understanding.',
+          deliverables: ['Programme and curriculum design', 'Social development initiatives', 'Teacher, student, and community engagement'],
+        },
+        {
+          title: 'Student and Family Integration Support',
+          description:
+            'People-centred guidance that helps students and their families — including those with a migration background from Africa, Asia, and other Global South regions — navigate complex school systems, administrative hurdles, social settings and challenges, and belonging.',
+          deliverables: ['Support navigating social spheres and challenges', 'Education and career orientation', 'Family engagement, where helpful'],
+        },
+      ],
+      cta: 'Ask about support for your family',
     },
     speaking: {
       navLabel: 'Speaking Engagements',
@@ -218,7 +227,7 @@ export const content = {
         'Research and evaluation',
         'Higher education and academic services',
         'Basic education — Kitas and schools',
-        'Family and student support',
+        'Student and family integration support',
         'Intercultural development and cohesion',
         'Speaking, workshop, or advisory session',
         'Other collaboration',
@@ -286,7 +295,6 @@ export const content = {
     serviceGroupLabels: {
       advisory: 'Migration, Diaspora & Interkulturelle Praxis',
       research: 'Forschung & Hochschulbildung',
-      education: 'Grundbildung & Familienbegleitung',
     },
     services: {
       'migration-diaspora-advisory': {
@@ -306,18 +314,6 @@ export const content = {
         description:
           'Fachliche Unterstützung für Universitäten, Hochschulen, Forschungseinrichtungen, Promovierende und internationale Programme.',
         deliverables: ['Lehrveranstaltungen und Gastvorträge', 'Betreuung von Abschlussarbeiten und Promotionscoaching', 'Forschungsprojekte und Antragsentwicklung'],
-      },
-      'basic-education': {
-        title: 'Grundbildung und Jugendentwicklung',
-        description:
-          'Inklusive Unterstützung für Kitas und Schulen, die Lernen, Teilhabe, soziale Entwicklung, Jugendentwicklung und interkulturelles Verständnis stärkt.',
-        deliverables: ['Programm- und Curriculum-Entwicklung', 'Initiativen zur sozialen Entwicklung', 'Einbindung von Lehrkräften, Schülerinnen und Schülern sowie der Gemeinschaft'],
-      },
-      'family-student-support': {
-        title: 'Familien- und Studierendenbegleitung',
-        description:
-          'Menschenzentrierte Begleitung, die Schülerinnen und Schülern mit Migrationshintergrund — auch aus Afrika, Asien und anderen Ländern des Globalen Südens — sowie ihren Familien hilft, komplexe Schulsysteme, administrative Hürden, soziale Umfelder und Herausforderungen sowie Zugehörigkeit zu meistern.',
-        deliverables: ['Begleitung bei sozialen Herausforderungen und im sozialen Umfeld', 'Bildungs- und Berufsorientierung', 'Einbindung der Familie, wo hilfreich'],
       },
       'intercultural-development': {
         title: 'Interkulturelle Entwicklung und Zusammenhalt',
@@ -383,6 +379,28 @@ export const content = {
         'Inklusiver Arbeitsplatz und Unternehmenskultur',
       ],
       cta: 'Ihre Organisation besprechen',
+    },
+    educationSupport: {
+      navLabel: 'Bildung & Familienbegleitung',
+      eyebrow: 'Grundbildung & Familienintegration',
+      heading: 'Schülerinnen, Schüler und Familien mit Zuversicht und Zugehörigkeit durch unbekannte Schulsysteme begleiten.',
+      paragraph:
+        'Ich arbeite direkt mit Kitas, Schulen, Schülerinnen, Schülern und Familien zusammen, um Lernen, Teilhabe und Zugehörigkeit zu stärken — einschließlich der Begleitung von Schülerinnen und Schülern mit Migrationshintergrund und ihren Familien beim Zurechtfinden in einem neuen Schulsystem.',
+      subservices: [
+        {
+          title: 'Grundbildung und Jugendentwicklung',
+          description:
+            'Inklusive Unterstützung für Kitas und Schulen, die Lernen, Teilhabe, soziale Entwicklung, Jugendentwicklung und interkulturelles Verständnis stärkt.',
+          deliverables: ['Programm- und Curriculum-Entwicklung', 'Initiativen zur sozialen Entwicklung', 'Einbindung von Lehrkräften, Schülerinnen und Schülern sowie der Gemeinschaft'],
+        },
+        {
+          title: 'Schüler- und Familienintegrationsbegleitung',
+          description:
+            'Menschenzentrierte Begleitung, die Schülerinnen und Schüler sowie ihre Familien — auch mit Migrationshintergrund aus Afrika, Asien und anderen Ländern des Globalen Südens — dabei unterstützt, komplexe Schulsysteme, administrative Hürden, soziale Umfelder und Herausforderungen sowie Zugehörigkeit zu meistern.',
+          deliverables: ['Begleitung bei sozialen Herausforderungen und im sozialen Umfeld', 'Bildungs- und Berufsorientierung', 'Einbindung der Familie, wo hilfreich'],
+        },
+      ],
+      cta: 'Unterstützung für Ihre Familie anfragen',
     },
     speaking: {
       navLabel: 'Vorträge',
@@ -467,7 +485,7 @@ export const content = {
         'Forschung und Evaluation',
         'Hochschulbildung und akademische Unterstützung',
         'Grundbildung — Kitas und Schulen',
-        'Familien- und Studierendenbegleitung',
+        'Schüler- und Familienintegrationsbegleitung',
         'Interkulturelle Entwicklung und Zusammenhalt',
         'Vortrag, Workshop oder Beratungssitzung',
         'Andere Zusammenarbeit',
