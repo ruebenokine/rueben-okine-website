@@ -127,10 +127,10 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                     ))}
                   </div>
                 ))}
-                <a href="#family-education-support" onClick={() => setServicesOpen(false)} className="block rounded-xl border-t border-border px-3 py-2.5 pt-3 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
+                <a href="#family-education-support" onClick={() => setServicesOpen(false)} className="block rounded-xl border-t border-border px-3 py-2.5 pt-3 text-sm font-semibold text-primary hover:bg-secondary">
                   {t.educationSupport.navLabel}
                 </a>
-                <a href="#speaking" onClick={() => setServicesOpen(false)} className="block rounded-xl px-3 py-2.5 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
+                <a href="#speaking" onClick={() => setServicesOpen(false)} className="block rounded-xl px-3 py-2.5 text-sm font-semibold text-primary hover:bg-secondary">
                   {t.speaking.navLabel}
                 </a>
               </div>
@@ -165,8 +165,8 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
                     ))}
                   </div>
                 ))}
-                <a href="#family-education-support" onClick={closeMobileMenu} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{t.educationSupport.navLabel}</a>
-                <a href="#speaking" onClick={closeMobileMenu} className="rounded-xl px-3 py-2.5 text-sm font-semibold hover:bg-secondary hover:text-primary">{t.speaking.navLabel}</a>
+                <a href="#family-education-support" onClick={closeMobileMenu} className="rounded-xl px-3 py-2.5 text-sm font-semibold text-primary hover:bg-secondary">{t.educationSupport.navLabel}</a>
+                <a href="#speaking" onClick={closeMobileMenu} className="rounded-xl px-3 py-2.5 text-sm font-semibold text-primary hover:bg-secondary">{t.speaking.navLabel}</a>
               </div>
             </details>
             <a href={`mailto:${email}?subject=Project%20inquiry`} className="inline-flex min-h-11 items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
@@ -398,12 +398,12 @@ export function ConsultingSite({ lang = 'en' }: { lang?: Lang }) {
               <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-primary">{t.educationSupport.eyebrow}</p>
               <h2 className="font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl">{t.educationSupport.heading}</h2>
               <p className="text-lg leading-relaxed text-muted-foreground">{t.educationSupport.paragraph}</p>
-              <div className="flex w-full flex-col gap-8">
+              <div className="grid w-full gap-5 sm:grid-cols-2">
                 {t.educationSupport.subservices.map((service) => (
-                  <div key={service.title} className="border-t border-border pt-6">
-                    <h3 className="font-serif text-xl font-semibold">{service.title}</h3>
-                    <p className="mt-3 leading-relaxed text-muted-foreground">{service.description}</p>
-                    <ul className="mt-4 flex flex-col gap-2.5">
+                  <div key={service.title} className="rounded-2xl border border-border bg-card p-6">
+                    <h3 className="font-serif text-lg font-semibold">{service.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.description}</p>
+                    <ul className="mt-4 flex flex-col gap-2.5 border-t border-border pt-4">
                       {service.deliverables.map((item) => (
                         <li key={item} className="flex gap-3 text-sm font-medium"><Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-primary" />{item}</li>
                       ))}
